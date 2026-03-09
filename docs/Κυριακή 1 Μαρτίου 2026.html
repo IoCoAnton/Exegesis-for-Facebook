@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Κυριακή 1 Μαρτίου 2026</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fdfcf9;
+            color: #2c2c2c;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* ── Font & Language Controls ── */
+        .font-controls {
+            position: sticky;
+            top: 0;
+            background-color: #f5f5f0;
+            border: 2px solid #d4c5a9;
+            border-radius: 8px;
+            padding: 12px 18px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .font-controls label {
+            font-weight: bold;
+            color: #5a4a3a;
+            margin-right: 6px;
+        }
+        .font-controls select,
+        .font-controls input {
+            padding: 5px 10px;
+            border: 1px solid #c4b5a0;
+            border-radius: 4px;
+            background-color: white;
+            font-size: 14px;
+        }
+
+        /* ── Language Toggle Button ── */
+        .lang-toggle {
+            padding: 8px 18px;
+            border: 2px solid #2a5a8a;
+            border-radius: 6px;
+            background: linear-gradient(to bottom, #ffffff, #e8f0f8);
+            color: #2a5a8a;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .lang-toggle:hover {
+            background: linear-gradient(to bottom, #e8f0f8, #c8ddf0);
+            box-shadow: 0 2px 6px rgba(42,90,138,0.3);
+        }
+        .lang-toggle:active {
+            transform: scale(0.97);
+        }
+
+        /* ── Language visibility ── */
+        .lang-el { display: block; }
+        .lang-en { display: none; }
+        body.show-english .lang-el { display: none; }
+        body.show-english .lang-en { display: block; }
+
+        /* ── Page Header ── */
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .page-header h1 {
+            font-size: 2.2em;
+            color: #5a3a1a;
+            margin-bottom: 5px;
+        }
+        .page-header .saints-line {
+            font-size: 1.2em;
+            color: #7a5a3a;
+            font-weight: normal;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .page-header .readings-list {
+            font-size: 1.05em;
+            color: #7a5a3a;
+            font-style: italic;
+        }
+        hr.section-divider {
+            border: none;
+            border-top: 2px solid #b89968;
+            margin: 30px 0;
+        }
+
+        /* ── Content Sections ── */
+        .section-block {
+            margin-bottom: 30px;
+            background-color: #fefefe;
+            padding: 22px 24px;
+            border-left: 4px solid #9b7653;
+            border-radius: 4px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .section-block.introduction {
+            border-left-color: #2a5a8a;
+            background: linear-gradient(to right, #f4f7fb, #fefefe);
+        }
+        .section-block.saints {
+            border-left-color: #b8860b;
+            background: linear-gradient(to right, #fdf8ee, #fefefe);
+        }
+        .section-block.reading-1 { border-left-color: #8b4513; }
+        .section-block.reading-2 { border-left-color: #2e7d32; }
+        .section-block.reading-3 { border-left-color: #5c3a8e; }
+        .section-block.reading-4 { border-left-color: #c62828; }
+        .section-block.references {
+            border-left-color: #757575;
+            background-color: #f9f7f4;
+        }
+        .section-title {
+            font-size: 1.45em;
+            color: #5a3a1a;
+            margin-bottom: 14px;
+            border-bottom: 2px solid #d4c5a9;
+            padding-bottom: 8px;
+        }
+        .reading-ref {
+            font-size: 0.88em;
+            color: #8b6f47;
+            font-style: italic;
+        }
+        .section-content {
+            line-height: 1.9;
+            text-align: justify;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .section-content p {
+            margin-bottom: 14px;
+        }
+        .references-list {
+            padding-left: 25px;
+            line-height: 1.8;
+        }
+        .references-list li {
+            margin-bottom: 8px;
+            color: #4a4a4a;
+        }
+
+        /* ── Disclaimer ── */
+        .disclaimer {
+            margin-top: 3em;
+            padding: 1.4em;
+            background-color: #f8f9fa;
+            border-left: 4px solid #2a5a8a;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-style: italic;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .font-controls { flex-direction: column; gap: 10px; }
+            .section-block { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Font & Language Controls -->
+    <div class="font-controls">
+        <div>
+            <label for="fontFamily">Γραμματοσειρά:</label>
+            <select id="fontFamily">
+                <option value="'Georgia', 'Times New Roman', serif">Georgia</option>
+                <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">Palatino</option>
+                <option value="'Garamond', serif">Garamond</option>
+                <option value="'Baskerville', serif">Baskerville</option>
+                <option value="'Cambria', serif">Cambria</option>
+                <option value="Arial, Helvetica, sans-serif">Arial</option>
+                <option value="'Courier New', Courier, monospace">Courier</option>
+            </select>
+        </div>
+        <div>
+            <label for="fontSize">Μέγεθος:</label>
+            <input type="range" id="fontSize" min="12" max="28" value="16" step="1">
+            <span id="fontSizeValue">16px</span>
+        </div>
+        <div>
+            <button id="langToggle" class="lang-toggle" title="Switch language">
+                🇬🇧 English
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent">
+        <div class="page-header">
+  <h1>Κυριακή 1 Μαρτίου 2026</h1>
+  <h2 class="saints-line">Α΄ ΝΗΣΤΕΙΩΝ (Ὀρθοδοξίας)</h2>
+  <p class="readings-list">Κατὰ Λουκᾶν 24:12-35 &nbsp;•&nbsp; Πρὸς Εβραίους 11:24 – 26, 32 – 40 &nbsp;•&nbsp; Κατὰ Ἰωάννην 1:43 – 52</p>
+</div>
+<hr class="section-divider">
+<div class="section-block introduction lang-el">
+<h2 class="section-title">Εισαγωγή στην Ημέρα</h2>
+<div class="section-content"><p>Αγαπητοί μου αδελφοί και αδελφές εν Χριστώ,</p><p>Σήμερα, την πρώτη Κυριακή της Μεγάλης Τεσσαρακοστής, η Εκκλησία μας πανηγυρίζει μια ημέρα με βαθύ νόημα και λαμπρότητα, την «Κυριακή της Ορθοδοξίας». Αυτή η ημέρα δεν είναι απλώς η αρχή της νηστείας, αλλά μια πανηγυρική επιβεβαίωση της αδιάσπαστης πίστης μας. Τιμούμε τον θρίαμβο της Ορθοδοξίας επί των αιρέσεων, ιδίως της Εικονομαχίας, που οδήγησε στην οριστική αποκατάσταση της τιμής των ιερών εικόνων το 843 μ.Χ. Είναι η γιορτή της αλήθειας: ότι ο Θεός Λόγος ενανθρώπησε, έλαβε σάρκα και οστά, και ως εκ τούτου μπορεί να απεικονιστεί. Οι εικόνες μας δεν είναι είδωλα, αλλά «παράθυρα στον ουρανό», που μας φανερώνουν τη θεία παρουσία και αγιότητα, αποτελώντας το θεμέλιο πάνω στο οποίο οικοδομείται όλη η πνευματική μας πορεία.</p><p>Τα σημερινά αναγνώσματα έρχονται να φωτίσουν αυτή την αλήθεια της αναγνώρισης του Θεού και να μας καλέσουν σε βαθύ στοχασμό. Από το Ευαγγέλιο του Ιωάννη (1:43-52) ακούμε την πρόσκληση <strong>«ἔρχου καὶ ἴδε»</strong> και την ομολογία του Ναθαναήλ, <strong>«Ραββί, σὺ εἶ ὁ υἱὸς τοῦ Θεοῦ, σὺ βασιλεὺς εἶ τοῦ Ἰσραήλ»</strong>. Η προς Εβραίους επιστολή (11:24-26, 32-40) υμνεί την πίστη ως <strong>«ἐλπιζομένων ὑπόστασις, πραγμάτων ἔλεγχος οὐ βλεπομένων»</strong>, υπενθυμίζοντας ότι οι μάρτυρες της πίστης υπέμειναν βλέποντας <strong>«τὸν γὰρ ἀόρατον ὡς ὁρῶν ἐκαρτέρησεν»</strong>. Ενώ το κατά Λουκάν Ευαγγέλιο (24:12-35) μας δείχνει τους μαθητές των Εμμαούς να αναγνωρίζουν τον Αναστημένο μόλις <strong>«αὐτῶν δὲ διηνοίχθησαν οἱ ὀφθαλμοὶ καὶ ἐπέγνωσαν αὐτόν»</strong>. Όλα αυτά τα αποσπάσματα μας καλούν να ανοίξουμε τα μάτια της ψυχής και του νου μας. Η Μεγάλη Τεσσαρακοστή είναι μια ευκαιρία κάθαρσης και ανανέωσης, και η Κυριακή της Ορθοδοξίας μας υπενθυμίζει τον σκοπό της: να βαδίσουμε προς την ένωση με τον Θεό, ζώντας την αλήθεια Του έμπρακτα, όπως μας διδάσκουν οι Άγιοι Πατέρες. Ας ζήσουμε την Ορθοδοξία μας με περηφάνια και ευθύνη, προσεγγίζοντας τον Θεό που είδαμε <strong>«πρόσωπον πρὸς πρόσωπον»</strong> (Α΄ Κορινθίους 13:12) στην ενανθρώπιση και δια των ιερών εικόνων.</p></div>
+</div>
+<div class="section-block introduction lang-en">
+<h2 class="section-title">Introduction to the Day</h2>
+<div class="section-content"><p>Κυριακή 1 Μαρτίου 2026 marks the First Sunday of Great Lent, a day universally known in our Church as the Sunday of Orthodoxy. This is not merely the first step into the Great Fast, but a profound celebration of the triumph of the Orthodox Faith itself. We commemorate the historic restoration of the holy icons in 843 AD, bringing an end to the tumultuous period of iconoclasm. This day profoundly declares our belief in the Incarnation of Christ: because God truly became man, taking on flesh, He can be depicted. Icons are not idols, but windows to heaven, testifying to the reality that the invisible God has become visible in Christ, making salvation accessible to us through His divine human person. This commemoration is therefore a reaffirmation of the very core of our Christian confession.</p><p>The appointed readings for this sacred day beautifully intertwine to illuminate this theme of "seeing" and "knowing" God in truth. In the Gospel of Luke, we encounter the disciples on the road to Emmaus, whose eyes are at first <strong>"restrained, so that they did not know Him."</strong> It is through the diligent explanation of the Scriptures and the <strong>"breaking of bread"</strong> that their eyes are finally opened, and they recognize the Risen Christ. Similarly, the Epistle to the Hebrews presents us with the "cloud of witnesses"—those Old Testament saints who lived by faith, seeing God's promises <strong>"from afar,"</strong> enduring through steadfast hope even without fully receiving what was promised. Then, in the Gospel of John, Philip invites Nathanael with the simple yet profound command, <strong>"Come and see."</strong> Nathanael's initial skepticism dissolves as Christ reveals His divine knowledge, leading to a glorious confession: <strong>"Rabbi, You are the Son of God!"</strong> These passages collectively demonstrate a journey from veiled perception to open recognition, from faith in the unseen to a direct encounter with the Incarnate God.</p><p>As we embark on this sacred Lenten journey, the Church invites us to a profound spiritual reflection. The Sunday of Orthodoxy calls us to reaffirm our commitment to the Apostolic Faith, not only intellectually but with our whole being. Just as the icons visually proclaim the truth of the Incarnation, we are called to embody this truth in our lives, allowing our spiritual eyes to be opened to Christ's presence. Let us commit to purifying our hearts through fasting, prayer, and almsgiving, so that we too, like the disciples at Emmaus, may come to recognize the Risen Lord in our midst. This day serves as a powerful reminder that our Orthodox faith provides the true path to seeing, knowing, and communing with God, preparing us for the ultimate encounter with Him at Pascha.</p></div>
+</div>
+<div class="section-block saints lang-el">
+<h2 class="section-title">Εορταζόμενοι Άγιοι</h2>
+<div class="section-content"><p>Αγαπητοί μου αδελφοί και αδελφές εν Χριστώ,</p><p>Σήμερα, την Πρώτη Κυριακή των Νηστειών, την Κυριακή της Ορθοδοξίας, η Εκκλησία μας δεν τιμά έναν συγκεκριμένο Άγιο ή Αγία με την έννοια της ατομικής μνήμης, αλλά το σύνολο των Αγίων Πατέρων και Μητέρων, των Ομολογητών και των Μαρτύρων που διαφύλαξαν, υπερασπίστηκαν και παρέδωσαν ακέραιη την Ορθόδοξη πίστη σε όλη τη διάρκεια της ιστορίας της. Είναι μια ημέρα πανηγυρική, όπου εορτάζουμε τον θρίαμβο της αληθινής πίστης, όπως αυτή διαμορφώθηκε και διατηρήθηκε μέσα από τους αγώνες των Αγίων μας, και κυρίως την οριστική αποκατάσταση των ιερών εικόνων μετά την περίοδο της Εικονομαχίας. Οι "εορταζόμενοι Άγιοι" σήμερα είναι όλοι εκείνοι που, με την αγία τους ζωή, τη διδασκαλία τους και συχνά το μαρτύριό τους, υπερασπίστηκαν την αλήθεια της σαρκώσεως του Θεού Λόγου, η οποία αποτυπώνεται και στις άγιες εικόνες.</p><p>Αυτοί οι Άγιοι, των οποίων τη συλλογική μνήμη τιμούμε, υπήρξαν φάροι φωτός σε σκοτεινές εποχές. Αντιμετώπισαν διωγμούς, εξορίες, φυλακίσεις και συχνά φρικτά μαρτύρια για την πίστη τους. Μεταξύ αυτών συγκαταλέγονται μεγάλοι θεολόγοι και ιεράρχες, μοναχοί και μοναχές, ακόμη και αυτοκράτορες, όπως η Αγία Θεοδώρα, που με την ορθή τους πίστη και το θάρρος τους, στάθηκαν εναντίον της πλάνης, διαφυλάσσοντας το δόγμα της Εκκλησίας. Το μαρτύριό τους δεν ήταν μόνο σωματικό, αλλά και πνευματικό, καθώς έπρεπε να παλέψουν με αιρέσεις που απειλούσαν την ίδια την καρδιά του Χριστιανισμού: την πίστη στον ενσαρκωμένο Θεό. Η πολιτεία τους υπήρξε παράδειγμα ακλόνητης αφοσίωσης στην αλήθεια, αψηφώντας κάθε κίνδυνο και θυσιάζοντας τα πάντα για την Ορθοδοξία.</p><p>Η πνευματική τους σημασία για εμάς τους πιστούς είναι τεράστια. Μας δείχνουν ότι η πίστη δεν είναι μια αφηρημένη ιδέα, αλλά μια ζωντανή αλήθεια που απαιτεί αγώνα, θυσία και ομολογία. Από τη ζωή τους μαθαίνουμε τη σημασία της προσήλωσης στην παράδοση της Εκκλησίας, την αξία της μελέτης των Γραφών και των Πατέρων, και την ανάγκη να είμαστε έτοιμοι να υπερασπιστούμε την πίστη μας με αγάπη και σθένος. Μας καλούν να εκτιμήσουμε το ανεκτίμητο δώρο της Ορθοδοξίας, το οποίο μας παραδόθηκε μέσα από τόσους αγώνες και θυσίες, και να γίνουμε κι εμείς συνεχιστές αυτής της ευλογημένης πορείας, ζώντας σύμφωνα με τις αρχές της πίστης μας και μαρτυρώντας τον Χριστό στον κόσμο.</p></div>
+</div>
+<div class="section-block saints lang-en">
+<h2 class="section-title">Saints Celebrated Today</h2>
+<div class="section-content"><p>My beloved brothers and sisters in Christ, as we begin the blessed journey of Great Lent, we mark its First Sunday with a profound celebration: the Sunday of Orthodoxy. On this glorious day, the Church does not commemorate a single individual saint, but rather the entire radiant assembly of holy confessors, martyrs, and theologians—the Orthodox Fathers and Mothers—who steadfastly defended the true faith against all heresies, most notably the destructive error of Iconoclasm. We celebrate their unwavering devotion to Christ and His Church, which culminated in the Triumph of Orthodoxy in 843 AD, when the veneration of holy icons was definitively restored throughout the Byzantine Empire, after nearly a century of struggle and persecution.</p><p>These holy ones, whose courage and theological insight we honor today, lived lives of immense struggle and unwavering conviction. Many suffered exile, imprisonment, torture, and even martyrdom for their refusal to renounce the veneration of icons. Figures like Saint John of Damascus, Saint Theodore the Studite, and Empress Theodora, among countless others known and unknown, stood firm, proclaiming that the depiction of Christ, the Theotokos, and the saints in icons is not idolatry, but rather a profound affirmation of God's Incarnation. They taught that through the icon, we venerate the person depicted, not the material, making visible the invisible grace of God and offering a window into the heavenly realm. Their ministry was one of theological defense, spiritual steadfastness, and enduring sacrifice for the purity of the Faith.</p><p>The spiritual significance of these defenders of Orthodoxy for us, the faithful today, cannot be overstated. Their lives serve as a powerful testament to the necessity of defending the true teachings of the Church, passed down to us from Christ and the Apostles. From their example, we learn the paramount importance of discernment, courage, and faithfulness in upholding the "faith once delivered to the saints" (Jude 1:3). They teach us that our faith is not merely a set of personal beliefs, but a living tradition, a precious inheritance to be cherished, understood, and defended. By venerating icons, we not only honor the prototypes they represent but also participate in the very mystery of the Incarnation, recognizing that God truly became man, allowing Himself to be seen and depicted for our salvation. May their intercessions strengthen us to remain steadfast in the Orthodox Faith throughout our lives.</p></div>
+</div>
+<div class="section-block reading-1 lang-el">
+<h2 class="section-title">Ευαγγέλιο Όρθρου <span class="reading-ref">(Κατὰ Λουκᾶν 24:12-35)</span></h2>
+<div class="section-content"><p>Αγαπητοί μου αδελφοί εν Χριστώ,</p><p>Σήμερα, την πρώτη Κυριακή της Μεγάλης Τεσσαρακοστής, εορτάζουμε την Κυριακή της Ορθοδοξίας, τον θρίαμβο της αληθινής πίστης και της ορθής δοξολογίας του Θεού. Το κεντρικό μας ανάγνωσμα από το Κατά Λουκάν Ευαγγέλιο (24:12-35) μάς μεταφέρει στην οδό προς Εμμαούς, λίγο μετά την Ανάσταση του Κυρίου. Δύο μαθητές, ο Κλεόπας και ένας άλλος, βαδίζουν αποκαρδιωμένοι και συζητούν για τα πρόσφατα γεγονότα της Σταύρωσης και της κενής τάφου. Ο Αναστημένος Χριστός τους συναντά, αλλά <strong>«αὐτῶν δὲ οἱ ὀφθαλμοὶ ἐκρατοῦντο τοῦ μὴ ἐπιγνῶναι αὐτόν.»</strong> (Λουκ. 24:16). Τους εξηγεί τις Γραφές, αποδεικνύοντας πώς όλες προφήτευσαν για Αυτόν: <strong>«ἀρξάμενος ἀπὸ Μωϋσέως καὶ ἀπὸ πάντων τῶν προφητῶν διερμήνευσεν αὐτοῖς ἐν πάσαις ταῖς γραφαῖς τὰ περὶ ἑαυτοῦ.»</strong> (Λουκ. 24:27). Η αναγνώριση έρχεται τελικά στη συγκατάβαση της οικίας, όταν ο Κύριος <strong>«λαβὼν τὸν ἄρτον εὐλόγησε, καὶ κλάσας ἐπεδίδου αὐτοῖς· αὐτῶν δὲ διηνοίχθησαν οἱ ὀφθαλμοί, καὶ ἐπέγνωσαν αὐτόν·»</strong> (Λουκ. 24:30-31).</p><p>Το ανάγνωσμα αυτό αποκαλύπτει βαθιές θεολογικές αλήθειες. Πρώτον, υπογραμμίζει την πνευματική τύφλωση που μπορεί να μας εμποδίσει να αναγνωρίσουμε τον Χριστό, ακόμη και όταν βρίσκεται κοντά μας. Δεύτερον, τονίζει τον καθοριστικό ρόλο των Γραφών στην αποκάλυψη του Χριστού ως εκπλήρωση των προφητειών. Οι καρδιές των μαθητών <strong>«ἐκαίετο»</strong> (Λουκ. 24:32) καθώς ο Κύριος τους εξηγούσε τις Γραφές, όπως αναφέρει ο Άγιος Κύριλλος Αλεξανδρείας, δείχνοντας τη δύναμη του θείου λόγου να φωτίζει την ψυχή. Τρίτον, και ίσως το πιο σημαντικό για την ημέρα μας, ο Κύριος αναγνωρίζεται στην <strong>«κλάσιν τοῦ ἄρτου»</strong>, δηλαδή στην Θεία Ευχαριστία, το κατεξοχήν μυστήριο της παρουσίας Του στην Εκκλησία. Αυτή η αναγνώριση, όπως σημειώνει ο Άγιος Ιωάννης ο Χρυσόστομος, δεν είναι απλά μια σωματική θέαση, αλλά μια πνευματική εμπειρία που προέρχεται από την υπακοή στο Λόγο και την κοινωνία του Σώματος και του Αίματος του Χριστού.</p><p>Η ιστορία των μαθητών της Εμμαούς συνδέεται στενά με τα άλλα αναγνώσματα της Κυριακής της Ορθοδοξίας και με το ίδιο το νόημα της εορτής. Το απόσπασμα από την προς Εβραίους Επιστολή (11:24-26, 32-40) υμνεί την πίστη ως <strong>«ἔλεγχος οὐ βλεπομένων»</strong>, την πεποίθηση για πράγματα που δεν βλέπουμε, και απαριθμεί τους ήρωες της πίστεως που έζησαν και υπέφεραν για τον Θεό. Η Κυριακή της Ορθοδοξίας γιορτάζει ακριβώς αυτή την αδιάσειστη πίστη, την ορθή δοξολογία του Θεού, που υπερασπίστηκε το δόγμα της Ενσάρκωσης και τη δυνατότητα απεικόνισης του Χριστού, απέναντι στην πνευματική τύφλωση της Εικονομαχίας. Το Ευαγγέλιο του Ιωάννη (1:43-52) με τον Φίλιππο και τον Ναθαναήλ, όπου ο Χριστός αποκαλύπτει την παντογνωσία Του και υπόσχεται στον Ναθαναήλ <strong>«μείζω τούτων ὄψῃ»</strong>, δηλαδή ότι θα δει τους αγγέλους να ανεβαίνουν και να κατεβαίνουν στον Υιό του Ανθρώπου, επιβεβαιώνει την παρουσία του Θεού στον κόσμο και τη δυνατότητα της ορατής εκδήλωσης του αόρατου Θείου.</p><p>Το μήνυμα της Εκκλησίας προς τους πιστούς σήμερα είναι σαφές: Η Ορθοδοξία είναι η αληθινή πίστη που μας επιτρέπει να αναγνωρίσουμε τον Χριστό πλήρως, όχι μόνο μέσα από τις Γραφές και την Θεία Κοινωνία, αλλά και μέσα από την ιερή τέχνη των εικόνων, που αποτελούν <strong>«βιβλία ἀγράμματα»</strong> και <strong>«παράθυρα τοῦ οὐρανοῦ»</strong>, όπως λέγουν οι Πατέρες. Όπως οι μαθητές στην Εμμαούς, έτσι και εμείς καλούμαστε να ανοίξουμε τα μάτια της ψυχής μας για να δούμε τον Αναστημένο Κύριο, να ακούσουμε τον λόγο Του που φωτίζει την καρδιά μας και να Τον κοινωνήσουμε στα Άγια Μυστήρια. Η Κυριακή της Ορθοδοξίας μας υπενθυμίζει ότι η ορθή πίστη είναι δρόμος προς την αναγνώριση του Χριστού και την κοινωνία μαζί Του, μια πρόσκληση να ζήσουμε την αλήθεια της Ενσάρκωσης, βλέποντας τον Θεό όχι μόνο με τα μάτια της πίστεως, αλλά και με την καρδιά που καίγεται από την αγάπη Του.</p></div>
+</div>
+<div class="section-block reading-1 lang-en">
+<h2 class="section-title">Orthros Gospel <span class="reading-ref">(Κατὰ Λουκᾶν 24:12-35)</span></h2>
+<div class="section-content"><p>Κυριακή 1 Μαρτίου 2026, the Sunday of Orthodoxy, we encounter the profound narrative from the Gospel of Luke 24:12-35, recounting the Lord's appearance to two disciples on the road to Emmaus. Disheartened and discussing the recent events of Christ's crucifixion and the puzzling reports of His empty tomb, they were joined by the Risen Christ, unrecognized. Christ, feigning ignorance of their sorrow, began to interpret the Holy Scriptures, <strong>"beginning at Moses and all the Prophets, He expounded to them in all the Scriptures the things concerning Himself"</strong> (Luke 24:27). Their hearts burned within them as He spoke. It was only later, as He took bread, blessed and broke it, and gave it to them, that <strong>"their eyes were opened and they knew Him"</strong> (Luke 24:31). Immediately, He vanished, leaving them transformed by this encounter. This passage is a powerful testament to Christ's divine pedagogy, teaching us how He reveals Himself through the Sacred Scriptures and, most profoundly, in the breaking of the bread, which the Fathers consistently identify with the Holy Eucharist.</p><p>The journey to Emmaus is a spiritual pilgrimage from despair to recognition, from blindness to vision. The disciples' initial inability to recognize Christ underscores the spiritual blindness that can afflict even those close to Him when sorrow clouds their perception. St. John Chrysostom, among other Fathers, emphasizes that Christ intentionally kept Himself veiled to demonstrate the power of the prophetic word and the Sacraments. Their <strong>"burning hearts"</strong> (Luke 24:32) symbolize the internal conviction and spiritual transformation that occurs when the truth of Christ penetrates the soul, preparing them for the ultimate revelation in the Holy Eucharist. This miraculous opening of their eyes signifies not just physical sight, but a profound spiritual awakening to the reality of the Risen Lord.</p><p>This passage profoundly connects with the other readings and the very essence of the Sunday of Orthodoxy. The Epistle from Hebrews 11:24-26, 32-40 celebrates the heroes of faith who, like the Emmaus disciples, walked by faith and endured suffering, yet remained steadfast. Their journey mirrors the disciples' movement from despair to recognition. Likewise, the Gospel from John 1:43-52 shows Nathanael's journey from skepticism to belief, as Christ reveals Himself, promising him that he <strong>"shall see heaven open, and the angels of God ascending and descending upon the Son of Man"</strong> (John 1:51). These readings collectively highlight a progression from partial understanding to a full, glorious vision of Christ. For the Sunday of Orthodoxy, commemorating the triumph of the true vision of God and the restoration of icon veneration, this Lukan narrative reminds us that Christ reveals Himself through His Word, His Sacraments, and through the visible, holy images of His Incarnation. The Church calls us to open our spiritual eyes, to seek Him earnestly, and to embrace the complete and true vision of God offered in the Orthodox Faith.</p></div>
+</div>
+<div class="section-block reading-2 lang-el">
+<h2 class="section-title">Απόστολος Θείας Λειτουργίας <span class="reading-ref">(Πρὸς Εβραίους 11:24 – 26, 32 – 40)</span></h2>
+<div class="section-content"><p>Αγαπητοί μου αδελφοί εν Χριστώ,</p><p>Η πρώτη Κυριακή των Νηστειών, η Κυριακή της Ορθοδοξίας, είναι ένας φάρος που μας καλεί να αναλογιστούμε το μεγαλείο και τη δύναμη της πίστεως. Το σημερινό αποστολικό ανάγνωσμα, από την προς Εβραίους Επιστολή (11:24-26, 32-40), μας παρουσιάζει ένα «μηνολόγιο» των ηρώων της πίστεως της Παλαιάς Διαθήκης. Αρχικά, αναφέρεται η επιλογή του Μωυσή να «<strong>μᾶλλον ἑλόμενος συγκακουχεῖσθαι τῷ λαῷ τοῦ Θεοῦ ἢ πρόσκαιρον ἔχειν ἁμαρτίας ἀπόλαυσιν</strong>» και να θεωρήσει «<strong>μείζονα πλοῦτον ἡγησάμενος τῶν ἐν Αἰγύπτῳ θησαυρῶν τὸν ὀνειδισμὸν τοῦ Χριστοῦ</strong>». Στη συνέχεια, ο συγγραφέας παραθέτει με γρήγορη διαδοχή πλήθος προφητών και δικαίων (Γεδεών, Βαράκ, Σαμψών, Δαβίδ κ.ά.) που «<strong>διὰ πίστεως</strong>» επιτέλεσαν θαύματα. Ο λόγος κορυφώνεται με τους μάρτυρες της πίστεως, οι οποίοι υπέστησαν φρικτά βασανιστήρια, όπως «<strong>ἐμπαιγμῶν καὶ μαστίγων πεῖραν, ἔτι δὲ δεσμῶν καὶ φυλακῆς</strong>», «<strong>ἐλιθάσθησαν, ἐπρίσθησαν, ἐπειράσθησαν, ἐν φόνῳ μαχαίρας ἀπέθανον</strong>», αρνούμενοι να προδώσουν την πίστη τους για πρόσκαιρη απελευθέρωση, «<strong>ἵνα κρείττονος ἀναστάσεως τύχωσι</strong>». Όλοι αυτοί, αν και «<strong>μαρτυρηθέντες διὰ τῆς πίστεως, οὐκ ἐκομίσαντο τὴν ἐπαγγελίαν</strong>», περιμένοντας τη δική μας τελείωση, καθώς ο Θεός είχε προβλέψει «<strong>κρεῖττόν τι προβλεψαμένου, ἵνα μὴ χωρὶς ἡμῶν τελειωθῶσι</strong>».</p><p>Τα βασικά θεολογικά και πνευματικά θέματα του αποσπάσματος είναι η πίστη ως αταλάντευτη εμπιστοσύνη στον Θεό, η οποία οδηγεί σε συνειδητή επιλογή, θυσία και υπομονή. Είναι η πίστη που βλέπει πέρα από το ορατό και το πρόσκαιρο, προς την αιώνια υπόσχεση. Η αναφορά στον «<strong>ὀνειδισμὸν τοῦ Χριστοῦ</strong>» που υπέστη ο Μωυσής, πριν την ενσάρκωση του Κυρίου, υπογραμμίζει την αδιάσπαστη ενότητα της θείας οικονομίας και την αιώνια παρουσία του Χριστού. Κατά τον Άγιο Ιωάννη τον Χρυσόστομο, ο Μωυσής «τὸν στέφανον τοῦ Χριστοῦ ᾑρεῖτο» (Ερμηνεία εις την προς Εβραίους Επιστολήν, PG 63, 155), δηλαδή επέλεξε την οδύνη για χάρη του Χριστού. Η υπομονή αυτών των παλαιοδιαθηκικών μορφών απέναντι στο μαρτύριο, με την ελπίδα μιας «<strong>κρείττονος ἀναστάσεως</strong>», τονίζει ότι η πίστη δεν είναι απλή διανοητική αποδοχή, αλλά βιωματική συμμετοχή, αγώνας και θυσία, προσβλέποντας στην τελική αποκατάσταση.</p><p>Το ανάγνωσμα αυτό συνδέεται αρμονικά με τις υπόλοιπες περικοπές της ημέρας και το βαθύτερο νόημα της Κυριακής της Ορθοδοξίας. Στην περικοπή του Λουκά (24:12-35), οι μαθητές στην πορεία προς Εμμαούς από την απελπισία οδηγούνται στην αναγνώριση του Χριστού «<strong>ἐν τῇ κλάσει τοῦ ἄρτου</strong>», ενώ στην περικοπή του Ιωάννη (1:43-52), ο Ναθαναήλ, από την αρχική αμφιβολία («<strong>Ἐκ Ναζαρὲτ δύναταί τι ἀγαθὸν εἶναι;</strong>»), φτάνει στην ομολογία πίστεως. Οι ήρωες της πίστεως των Εβραίων, αντίστοιχα, «βλέπουν» με τα μάτια της πίστεως την υπόσχεση του Θεού, ακόμη και χωρίς να τη βλέπουν υλικά, προσμένοντας τη δική μας τελείωση. Η Κυριακή της Ορθοδοξίας, που εορτάζει τον θρίαμβο της αληθινής πίστης επί των αιρέσεων, ιδιαίτερα της Εικονομαχίας, αποτελεί την κορύφωση αυτής της διαρκούς μάχης για τη διαφύλαξη της αλήθειας. Η Εκκλησία, μέσα από το συγκεκριμένο ανάγνωσμα, μας καλεί σε μία πίστη σταθερή, αλύγιστη, που αντέχει στις δοκιμασίες της Μεγάλης Σαρακοστής και της ζωής εν γένει, μιμούμενοι το παράδειγμα των προφητών και των μαρτύρων, οι οποίοι, κατά τον Άγιο Ιωάννη τον Δαμασκηνό, «<strong>διὰ τῆς πίστεως εἶδον Χριστόν</strong>» (Περί εικόνων, λόγος Α΄, PG 94, 1260). Η πίστη μας στην ενσαρκωμένη αλήθεια του Χριστού, η οποία αποτυπώνεται και στις ιερές εικόνες, είναι η κληρονομιά και ο αγώνας που μας ενώνει με αυτούς τους μεγάλους μάρτυρες της πίστεως.</p></div>
+</div>
+<div class="section-block reading-2 lang-en">
+<h2 class="section-title">Apostle of the Divine Liturgy <span class="reading-ref">(Πρὸς Εβραίους 11:24 – 26, 32 – 40)</span></h2>
+<div class="section-content"><p>On this radiant Sunday of Orthodoxy, as we commemorate the triumph of true faith, the Church presents us with a profound passage from the Epistle to the Hebrews (11:24-26, 32-40). This excerpt is part of the great "Hall of Faith," a majestic roll call of Old Testament heroes. It begins with Moses, who, by faith, chose to suffer affliction with the people of God rather than to enjoy the fleeting pleasures of sin, <strong>"esteeming the reproach of Christ greater riches than the treasures in Egypt"</strong> (Hebrews 11:26). The passage then swiftly recounts the incredible acts of faith by figures like Gideon, Barak, Samson, David, and the prophets, who <strong>"through faith subdued kingdoms, worked righteousness, obtained promises, stopped the mouths of lions"</strong> (Hebrews 11:33). But the narrative shifts powerfully to those who endured immense suffering for their convictions: those tortured, scourged, chained, stoned, sawn in two, wandering destitute, <strong>"of whom the world was not worthy"</strong> (Hebrews 11:38). These all, having obtained a good testimony through faith, did not yet receive the ultimate promise, <strong>"God having provided something better for us, that they should not be made perfect apart from us"</strong> (Hebrews 11:39-40).</p><p>The key theological and spiritual themes here are manifold. Firstly, it defines faith not merely as intellectual assent but as an active, enduring trust in the unseen God, leading to both heroic deeds and steadfast suffering. It highlights a profound eschatological vision: these saints, from Moses to the martyrs, looked beyond transient earthly rewards and comforts, fixating their gaze on <strong>"a better resurrection"</strong> (Hebrews 11:35) and the eternal promises of God. Their choice to embrace <strong>"the reproach of Christ"</strong> prefigures the Christian call to discipleship, which often involves sacrifice and persecution for the sake of truth. St. John Chrysostom, in his homilies on Hebrews, emphasizes that these Old Testament figures, though they lived before the Incarnation, possessed a Christ-centred faith, looking forward to the Messiah and demonstrating a spiritual vision that transcended their immediate circumstances. Their steadfastness in the face of death underscores the conviction that God’s promises are true and ultimate.</p><p>This Epistle reading beautifully harmonizes with the day's Gospel lessons. The Johannine reading (John 1:43-52), celebrating Philip and Nathanael's encounter with Christ, speaks of coming to see and believe in the Son of God, and of Nathanael seeing <strong>"greater things than these"</strong> (John 1:50) – the opening of heaven. This parallels the "something better" and "better resurrection" promised in Hebrews, where faith culminates in the vision of Christ. Likewise, the Lukan reading (Luke 24:12-35) recounts the disciples on the road to Emmaus, whose spiritual eyes are opened to recognize Christ through the Scriptures, <strong>"beginning at Moses and all the Prophets"</strong> (Luke 24:27). The "Hall of Faith" is precisely this testimony of Moses and the Prophets, revealing how all history and all faithful endurance point towards Christ, who perfects their faith and ours. The Old Testament witnesses laid the foundation, and their faith is fulfilled and made perfect in the Incarnate God, whom we now know and worship in the Church.</p><p>The message the Church wants the faithful to take away on the Sunday of Orthodoxy is clear and powerful. Just as the saints of old endured for their faith, even unto death, refusing to compromise the truth for temporary relief, so too are we called to uphold the integrity of the Orthodox Faith. This day commemorates those who struggled for the truth of the holy Icons, suffering persecution rather than denying the reality of Christ’s Incarnation and the sanctification of matter. We are part of this unbroken <strong>"cloud of witnesses"</strong> (Hebrews 12:1), called to emulate their spiritual courage, steadfastness, and unwavering commitment to truth. Our faith is not a mere intellectual exercise but a living, active conviction that may require sacrifice, yet always looks to the ultimate promise of God's Kingdom, where we, together with all the saints, will be made perfect in Christ.</p></div>
+</div>
+<div class="section-block reading-3 lang-el">
+<h2 class="section-title">Ευαγγέλιο Θείας Λειτουργίας <span class="reading-ref">(Κατὰ Ἰωάννην 1:43 – 52)</span></h2>
+<div class="section-content"><p>Αυτή την πρώτη Κυριακή των Νηστειών, την Κυριακή της Ορθοδοξίας, η Εκκλησία μας προσκαλεί να αναλογιστούμε την κλήση των πρώτων μαθητών και την αποκάλυψη της θεότητας του Χριστού, μέσα από το ευαγγελικό ανάγνωσμα του Ιωάννη. Το απόσπασμα αρχίζει με την κλήση του Φιλίππου από τον Ιησού, ο οποίος με τη σειρά του προσκαλεί τον Ναθαναήλ να γνωρίσει τον Μεσσία, <strong>«ὃν ἔγραψεν Μωϋσῆς ἐν τῷ νόμῳ καὶ οἱ προφῆται, Ἰησοῦν υἱὸν τοῦ Ἰωσὴφ τὸν ἀπὸ Ναζαρέτ»</strong> (Ιωάν. 1:45). Ο Ναθαναήλ εκφράζει αρχικά τη δυσπιστία του, ρωτώντας: <strong>«Ἐκ Ναζαρέτ δύναταί τι ἀγαθὸν εἶναι;»</strong> (Ιωάν. 1:46). Η απάντηση του Φιλίππου είναι μια διαχρονική πρόσκληση: <strong>«Ἔρχου καὶ ἴδε»</strong> (Ιωάν. 1:46). Όταν ο Ναθαναήλ πλησιάζει, ο Ιησούς αποκαλύπτει την παντογνωσία Του, γνωρίζοντας όχι μόνο την παρουσία του Ναθαναήλ κάτω από τη συκιά, αλλά και την ειλικρίνειά του: <strong>«ἰδοὺ ἀληθῶς Ἰσραηλίτης ἐν ᾧ δόλος οὐκ ἔστιν»</strong> (Ιωάν. 1:47). Αυτή η αποκάλυψη οδηγεί τον Ναθαναήλ στην άμεση ομολογία πίστεως: <strong>«Ραββί, σὺ εἶ ὁ υἱὸς τοῦ Θεοῦ, σὺ εἶ ὁ βασιλεὺς τοῦ Ἰσραήλ»</strong> (Ιωάν. 1:49). Ο Ιησούς, τέλος, υπόσχεται στον Ναθαναήλ ότι θα δει μεγαλύτερα πράγματα, τους αγγέλους να ανεβαίνουν και να κατεβαίνουν στον Υιό του Ανθρώπου, συνδέοντας έτσι τον εαυτό Του με τη σκάλα του Ιακώβ.</p><p>Τα βασικά θεολογικά και πνευματικά θέματα που αναδεικνύονται είναι η θεία γνώση του Χριστού, η αξία της προσωπικής εμπειρίας και η σημασία της ειλικρίνειας στην αναζήτηση της αλήθειας. Η γνώση του Ιησού για τον Ναθαναήλ πριν καν τον συναντήσει, καθώς και η αποκάλυψη του τι συνέβαινε κάτω από τη συκιά, αποτελούν αδιάσειστα σημεία της θεότητάς Του. Το <strong>«ἔρχου καὶ ἴδε»</strong> δεν είναι απλώς μια πρόσκληση για να δει κανείς με τα μάτια του, αλλά για να βιώσει, να δοκιμάσει και να αναγνωρίσει τον Χριστό με την καρδιά του. Ο Άγιος Ιωάννης ο Χρυσόστομος, ερμηνεύοντας το απόσπασμα, τονίζει την αξία της άμεσης εμπειρίας και το πώς ο Φίλιππος δεν προσπάθησε να πείσει τον Ναθαναήλ με λογικά επιχειρήματα, αλλά τον οδήγησε στην πηγή της αλήθειας. Η αναγνώριση του Ναθαναήλ ως <strong>«ἀληθῶς Ἰσραηλίτης ἐν ᾧ δόλος οὐκ ἔστιν»</strong> υπογραμμίζει ότι η καθαρότητα της καρδιάς και η έλλειψη υποκρισίας είναι απαραίτητα για την υποδοχή της θείας αποκάλυψης. Η υπόσχεση των αγγέλων που ανεβαίνουν και κατεβαίνουν στον Υιό του Ανθρώπου, σύμφωνα με τον Άγιο Κύριλλο Αλεξανδρείας, δηλώνει την ενσάρκωση του Θεού Λόγου, ο οποίος ως Υιός του Ανθρώπου γίνεται η γέφυρα, η σκάλα που συνδέει τον ουρανό με τη γη, το θείο με το ανθρώπινο.</p><p>Το ανάγνωσμα αυτό συνδέεται άρρηκτα με τα άλλα αναγνώσματα της ημέρας. Η πορεία του Ναθαναήλ από τη δυσπιστία στην ομολογία παραλληλίζεται με την εμπειρία των μαθητών στους Εμμαούς (Λουκ. 24:12-35), οι οποίοι αρχικά δεν αναγνώρισαν τον αναστημένο Χριστό, αλλά Τον γνώρισαν <strong>«ἐν τῇ κλάσει τοῦ ἄρτου»</strong> (Λουκ. 24:35) – μια άμεση, βιωματική συνάντηση. Επίσης, η πίστη του Ναθαναήλ έρχεται ως επιστέγασμα των πράξεων πίστεως των αγίων της Παλαιάς Διαθήκης (Εβρ. 11:24-26, 32-40), οι οποίοι <strong>«διὰ πίστεως»</strong> (Εβρ. 11:33) έπραξαν θαυμαστά, χωρίς να λάβουν την πλήρη εκπλήρωση των υποσχέσεων. Ο Ναθαναήλ είναι αυτός που βρίσκει τον Μεσσία που τόσοι πολλοί ήλπιζαν και προσδοκούσαν. Το μήνυμα της Εκκλησίας την Κυριακή της Ορθοδοξίας είναι σαφές: Η Ορθόδοξη πίστη δεν είναι μια αφηρημένη φιλοσοφία, αλλά μια προσωπική συνάντηση με τον ενσαρκωμένο Χριστό. Η νίκη της Ορθοδοξίας, που γιορτάζουμε σήμερα, είναι η επιβεβαίωση ότι ο Θεός έγινε άνθρωπος και είναι ορατός, προσιτός και απεικονίσιμος. Ο Χριστός είναι η <strong>«σκάλα»</strong> (Ιωάν. 1:51) που ενώνει ουρανό και γη, επιβεβαιώνοντας τη θεολογική βάση για τη τιμή των εικόνων και τη δυνατότητα να γνωρίσουμε τον Θεό όχι μόνο με την ακοή, αλλά και με την όραση, μέσω του προσώπου του Υιού του Ανθρώπου. Μας καλεί να υπερβούμε τις προκαταλήψεις μας, να αποκτήσουμε καθαρή καρδιά και να Τον αναζητήσουμε με ειλικρίνεια, βιώνοντας έτσι την αλήθεια της Ορθοδοξίας.</p></div>
+</div>
+<div class="section-block reading-3 lang-en">
+<h2 class="section-title">Gospel of the Divine Liturgy <span class="reading-ref">(Κατὰ Ἰωάννην 1:43 – 52)</span></h2>
+<div class="section-content"><p>My beloved brothers and sisters in Christ, today, the First Sunday of Great Lent, the Sunday of Orthodoxy, our Gospel reading from John 1:43-52 beautifully illustrates the journey of faith and the profound revelation of Christ’s divine identity. We hear how Jesus calls Philip, who then immediately finds Nathanael. Philip joyfully declares, <strong>"We have found Him of whom Moses in the law, and also the prophets, wrote—Jesus of Nazareth, the son of Joseph."</strong> Nathanael's initial reaction is one of skepticism: <strong>"Can anything good come out of Nazareth?"</strong> Philip's simple yet profound response is, <strong>"Come and see."</strong> Upon meeting Nathanael, Jesus reveals His divine knowledge by declaring, <strong>"Behold, an Israelite indeed, in whom is no deceit!"</strong> When Nathanael questions how Jesus knows him, Christ responds, <strong>"Before Philip called you, when you were under the fig tree, I saw you."</strong> This simple statement profoundly moves Nathanael, leading to his glorious confession: <strong>"Rabbi, You are the Son of God! You are the King of Israel!"</strong> Jesus then promises him a greater vision: <strong>"Most assuredly, I say to you, hereafter you shall see heaven open, and the angels of God ascending and descending upon the Son of Man."</strong></p><p>This passage is rich with theological and spiritual themes. It highlights the call to discipleship, which often involves an initial overcoming of prejudice or doubt, as exemplified by Nathanael. Philip's invitation, <strong>"Come and see,"</strong> emphasizes the experiential nature of faith, inviting personal encounter rather than mere intellectual assent. Most strikingly, Christ's revelation of knowing Nathanael "under the fig tree" is a powerful testament to His omniscience and divine nature. As St. John Chrysostom teaches, this demonstrates Christ’s intimate knowledge of the human heart, far beyond what any mere man could possess. Nathanael's immediate and profound confession – <strong>"You are the Son of God! You are the King of Israel!"</strong> – is a cornerstone affirmation of Christ's dual nature: true God and true Man. The concluding promise of seeing <strong>"heaven open, and the angels of God ascending and descending upon the Son of Man"</strong> evokes Jacob's ladder (Genesis 28:12), signifying Christ as the ultimate bridge between heaven and earth, the Mediator who perfectly unites divinity and humanity, making God accessible to man and man to God. St. Cyril of Alexandria interpreted this vision as a clear affirmation of the Incarnation, by which the Son of God came down to us, opening the path to heaven.</p><p>The reading resonates deeply with the spirit of the Sunday of Orthodoxy. This day celebrates the triumph over iconoclasm, which fundamentally affirms the reality of the Incarnation – that God truly became flesh and is therefore representable. Nathanael's journey from skepticism about Jesus' earthly origin to confessing Him as the <strong>"Son of God"</strong> mirrors the Church’s struggle to affirm the full humanity and divinity of Christ, which is the very foundation for venerating holy icons. The promise of the Son of Man being the new Jacob's Ladder, bridging heaven and earth, is a potent image of the Hypostatic Union, which icons visibly proclaim. Furthermore, this passage beautifully complements the Epistle reading from Hebrews (11:24-26, 32-40), which extols the heroes of faith who believed in things unseen, for Nathanael's confession stems from a profound spiritual insight into Christ's divine identity, transcending his initial human skepticism. It also echoes the Emmaus narrative (Luke 24:12-35) where Christ is revealed as the fulfillment of the Law and Prophets, just as Philip introduces Jesus to Nathanael.</p><p>As we embark on the journey of Great Lent, the Church calls us to internalize the message of this Gospel. Like Nathanael, we are invited to <strong>"come and see"</strong> Christ for ourselves, to move beyond superficial understanding or prejudice, and to encounter Him personally through prayer, fasting, and the sacred mysteries. We are called to recognize and confess Him as the Son of God, the One who knows our hearts, and the one who bridges the gap between our fallen world and the heavenly Kingdom. This Sunday, as we celebrate the restoration of Orthodoxy, let us embrace the truth of the Incarnation, affirming that in Christ, God has truly become visible and accessible, opening the way for us to ascend to Him and participate in His divine life. Let us carry Nathanael’s spirit of sincere inquiry and profound confession into our Lenten journey, allowing Christ to reveal Himself ever more fully within us.</p></div>
+</div>
+<div class="section-block references lang-el">
+<h2 class="section-title">Αναφορές και Παραπομπές</h2>
+<ol class="references-list">
+  <li>**Άγιος Ιωάννης ο Δαμασκηνός.** *Πρὸς τοὺς διαβάλλοντας τὰς ἁγίας εἰκόνας Λόγοι Γ'.* (Patrologia Graeca 94, 1231-1420). Το θεμελιώδες έργο για την υπεράσπιση της τιμής των εικόνων, κεντρικό για την κατανόηση της Κυριακής της Ορθοδοξίας.</li>
+  <li>**Άγιος Θεόδωρος ο Στουδίτης.** *Επιστολαί* (Περί της προσκυνήσεως των αγίων εικόνων). (Patrologia Graeca 99, 909-1588). Οι επιστολές του Αγίου Θεοδώρου είναι καθοριστικές για την υπεράσπιση της εικονολατρίας κατά τη δεύτερη περίοδο της εικονομαχίας.</li>
+  <li>**Άγιος Ιωάννης ο Χρυσόστομος.** *Ομιλίαι εις την προς Εβραίους Επιστολήν.* (Patrologia Graeca 63, 1-236). Οι ομιλίες του Χρυσοστόμου παρέχουν βαθιά ερμηνεία της επιστολής προς Εβραίους, ιδίως του 11ου κεφαλαίου για την πίστη, το οποίο είναι ένα από τα αποστολικά αναγνώσματα της ημέρας.</li>
+  <li>**Το Τριώδιον.** Έκδοση της Αποστολικής Διακονίας της Εκκλησίας της Ελλάδος (ή άλλου Ορθοδόξου εκδοτικού οίκου). Περιέχει τις ακολουθίες, τους ύμνους και τα συγκεκριμένα αναγνώσματα της Κυριακής της Ορθοδοξίας. Αποτελεί την κατεξοχήν λειτουργική πηγή.</li>
+  <li>**Λεβεντοπούλου, Ειρήνη.** *Η Κυριακή της Ορθοδοξίας: Ιστορική και Θεολογική προσέγγιση.* Θεσσαλονίκη: Εκδόσεις Πουρναρά, 2000. Μια σύγχρονη ελληνική επιστημονική μελέτη αφιερωμένη αποκλειστικά στην ιστορία και τη θεολογία της Κυριακής της Ορθοδοξίας.</li>
+  <li>**Ουσπένσκυ, Λεωνίδας.** *Η Θεολογία της Εικόνας στην Ορθόδοξη Εκκλησία.* Μετάφραση: Δ. Σκιαδαρέσης. Αθήνα: Εκδόσεις Αρμός, 1992. Ένα κλασικό έργο σύγχρονης ορθόδοξης θεολογίας που εμβαθύνει στην ουσία και τη σημασία των ιερών εικόνων, η οποία είναι το επίκεντρο της Κυριακής της Ορθοδοξίας.</li>
+  <li>**Φλωρόφσκυ, Γεώργιος.** *Βυζαντινοί Πατέρες του 6ου-8ου Αιώνα.* Μετάφραση: Π. Παπαβασιλείου. Θεσσαλονίκη: Πουρναράς, 1991. Παρέχει το ιστορικό και θεολογικό πλαίσιο της εικονομαχικής περιόδου και των Πατέρων που υπερασπίστηκαν την Ορθοδοξία.</li>
+  <li>**Βούλγαρης, Ευστάθιος Γ.** *Ορθόδοξη Δογματική Θεολογία.* Τόμος Β'. Αθήνα: Εκδόσεις "Δομή", 2006. Περιλαμβάνει κεφάλαια για τις ιερές εικόνες και την Ιερά Παράδοση, εξηγώντας τη δογματική θεμελίωση της τιμής τους και τη σημασία τους για την Ορθόδοξη πίστη.</li>
+</ol>
+</div>
+<div class="section-block references lang-en">
+<h2 class="section-title">References and Citations</h2>
+<ol class="references-list">
+  <li>**Saint John Chrysostom.** *Homilies on the Epistle to the Hebrews.* Homily 28 on Hebrews 11:24-26, 32-40 directly expounds upon the "cloud of witnesses," suffering for faith, and the promise of a better resurrection, themes central to the commemoration of the confessors of Orthodoxy.</li>
+  <li>**Saint John Chrysostom.** *Homilies on the Gospel of John.* Homily 20 on John 1:43-52 offers rich theological insights into Nathanael's encounter with Christ, highlighting seeing, knowledge, and the recognition of divinity, which are foundational for understanding the theology of icons.</li>
+  <li>**Saint John of Damascus.** *On the Divine Images: Three Apologetic Treatises against those who Attack the Divine Images.* SVS Press, 2003. This foundational work provides the primary theological defense for the veneration of icons, which is the central dogmatic triumph celebrated on the Sunday of Orthodoxy.</li>
+  <li>**Acts of the Seventh Ecumenical Council (Nicaea II, 787 AD).** *The Decrees of the Ecumenical Councils,* Vol. 1, edited by Norman P. Tanner, S.J. Georgetown University Press, 1990, pp. 121-155. This council formally defined the veneration of icons, and its decrees are the dogmatic basis for the celebration of the Sunday of Orthodoxy.</li>
+  <li>**The Great Lenten Triodion.** Translated by Mother Mary and Archimandrite Kallistos Ware. Faber and Faber, 1978. This liturgical book contains the complete services for the period of Great Lent, including the specific hymns, prayers, and readings (Epistle and Gospel) appointed for the Sunday of Orthodoxy.</li>
+  <li>**Schmemann, Alexander.** *Great Lent: Journey to Pascha.* Revised Edition. St Vladimir's Seminary Press, 1969. This classic work provides an indispensable theological and spiritual commentary on the entire Lenten period, with a dedicated chapter illuminating the historical and liturgical significance of the Sunday of Orthodoxy.</li>
+  <li>**Ouspensky, Leonid, and Lossky, Vladimir.** *The Meaning of Icons.* SVS Press, 1989. This seminal work on Orthodox iconography delves into the theological and spiritual dimensions of icons, directly linking to the dogmatic pronouncements affirmed on the Sunday of Orthodoxy.</li>
+  <li>**Meyendorff, John.** *Byzantine Theology: Historical Trends and Doctrinal Themes.* Revised Edition. Fordham University Press, 1979. Chapters related to the Iconoclastic Controversy and the subsequent restoration of icon veneration provide crucial historical and theological context for the Feast of Orthodoxy.</li>
+</ol>
+</div>
+<div class="disclaimer lang-el">
+<strong>Σημείωση:</strong> Η παρούσα εξήγηση παρέχεται προκειμένου να βοηθήσει τους πιστούς να κατανοήσουν το πλούσιο θεολογικό περιεχόμενο των ορισμένων αναγνωσμάτων της Αγίας Γραφής. Για βαθύτερη μελέτη, συμβουλευτείτε τον εφημέριό σας, τον πνευματικό σας πατέρα ή έγκυρες Ορθόδοξες θεολογικές πηγές.Ετοιμάστηκε από: Αναγνώστης Ιωάννης Κ. Αντωνόπουλος
+</div>
+<div class="disclaimer lang-en">
+<strong>Note:</strong> This exegesis is provided to help the faithful understand the rich theological content of the appointed Scripture readings. For deeper study, please consult your parish priest, spiritual father, or authoritative Orthodox theological sources.Prepared by: Reader Ioannis K. Antonopoulos
+</div>
+    </div>
+
+    <script>
+        // ── Font controls ──
+        var fontFamily    = document.getElementById('fontFamily');
+        var fontSize      = document.getElementById('fontSize');
+        var fontSizeValue = document.getElementById('fontSizeValue');
+        var mainContent   = document.getElementById('mainContent');
+        var body          = document.body;
+
+        var savedFont = localStorage.getItem('readingsFont') || "'Georgia', 'Times New Roman', serif";
+        var savedSize = localStorage.getItem('readingsFontSize') || '16';
+
+        fontFamily.value           = savedFont;
+        fontSize.value             = savedSize;
+        fontSizeValue.textContent  = savedSize + 'px';
+        body.style.fontFamily      = savedFont;
+        mainContent.style.fontSize = savedSize + 'px';
+
+        fontFamily.addEventListener('change', function() {
+            body.style.fontFamily = fontFamily.value;
+            localStorage.setItem('readingsFont', fontFamily.value);
+        });
+
+        fontSize.addEventListener('input', function() {
+            var size = fontSize.value;
+            fontSizeValue.textContent  = size + 'px';
+            mainContent.style.fontSize = size + 'px';
+            localStorage.setItem('readingsFontSize', size);
+        });
+
+        // ── Language toggle ──
+        var langToggle = document.getElementById('langToggle');
+        var isEnglish  = localStorage.getItem('readingsLang') === 'en';
+
+        function applyLanguage() {
+            if (isEnglish) {
+                body.classList.add('show-english');
+                langToggle.innerHTML = '🇬🇷 Ελληνικά';
+                langToggle.title = 'Εναλλαγή γλώσσας';
+            } else {
+                body.classList.remove('show-english');
+                langToggle.innerHTML = '🇬🇧 English';
+                langToggle.title = 'Switch language';
+            }
+        }
+
+        applyLanguage();
+
+        langToggle.addEventListener('click', function() {
+            isEnglish = !isEnglish;
+            localStorage.setItem('readingsLang', isEnglish ? 'en' : 'el');
+            applyLanguage();
+        });
+    </script>
+</body>
+</html>
