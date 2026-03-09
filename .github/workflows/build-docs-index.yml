@@ -1,0 +1,86 @@
+name: Build docs index
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "docs/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Generate docs/index.html
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          shopt -s nullglob
+          files=(docs/*.html)
+
+          # Rebuild index (exclude itself)
+          filtered=()
+          for f in "${files[@]}"; do
+            base="$(basename "$f")"
+            if [[ "$base" != "index.html" ]]; then
+              filtered+=("$base")
+            fi
+          done
+
+          {
+            echo '<!doctype html>'
+            echo '<html lang="el">'
+            echo '  <head>'
+            echo '    <meta charset="utf-8" />'
+            echo '    <meta name="viewport" content="width=device-width, initial-scale=1" />'
+            echo '    <title>Άρθρα</title>'
+            echo '    <style>'
+            echo '      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1rem; }'
+            echo '      h1 { margin-bottom: 0.25rem; }'
+            echo '      .hint { color: #555; margin-top: 0; }'
+            echo '      ul { line-height: 1.8; padding-left: 1.2rem; }'
+            echo '      a { text-decoration: none; }'
+            echo '      a:hover { text-decoration: underline; }'
+            echo '    </style>'
+            echo '  </head>'
+            echo '  <body>'
+            echo '    <h1>Άρθρα</h1>'
+            echo '    <p class="hint">Κάνε κλικ σε ένα άρθρο και αντέγραψε το link από τη γραμμή διεύθυνσης του browser.</p>'
+            echo '    <ul>'
+
+            # Simple alphabetical order (UTF-8 aware enough for this use)
+            IFS=$'\n' sorted=($(printf '%s\n' "${filtered[@]}" | sort))
+            unset IFS
+
+            for base in "${sorted[@]}"; do
+              # Keep the filename exactly as-is in href; the browser will encode it when needed.
+              title="${base%.html}"
+              echo "      <li><a href=\"$base\">$title</a></li>"
+            done
+
+            echo '    </ul>'
+            echo '  </body>'
+            echo '</html>'
+          } > docs/index.html
+
+      - name: Commit and push if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo "No changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html
+          git commit -m "Update docs index"
+          git push
