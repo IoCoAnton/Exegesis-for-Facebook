@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Κυριακή 15 Μαρτίου 2026</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fdfcf9;
+            color: #2c2c2c;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        /* ── Font & Language Controls ── */
+        .font-controls {
+            position: sticky;
+            top: 0;
+            background-color: #f5f5f0;
+            border: 2px solid #d4c5a9;
+            border-radius: 8px;
+            padding: 12px 18px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .font-controls label {
+            font-weight: bold;
+            color: #5a4a3a;
+            margin-right: 6px;
+        }
+        .font-controls select,
+        .font-controls input {
+            padding: 5px 10px;
+            border: 1px solid #c4b5a0;
+            border-radius: 4px;
+            background-color: white;
+            font-size: 14px;
+        }
+
+        /* ── Language Toggle Button ── */
+        .lang-toggle {
+            padding: 8px 18px;
+            border: 2px solid #2a5a8a;
+            border-radius: 6px;
+            background: linear-gradient(to bottom, #ffffff, #e8f0f8);
+            color: #2a5a8a;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        .lang-toggle:hover {
+            background: linear-gradient(to bottom, #e8f0f8, #c8ddf0);
+            box-shadow: 0 2px 6px rgba(42,90,138,0.3);
+        }
+        .lang-toggle:active {
+            transform: scale(0.97);
+        }
+
+        /* ── Language visibility ── */
+        .lang-el { display: block; }
+        .lang-en { display: none; }
+        body.show-english .lang-el { display: none; }
+        body.show-english .lang-en { display: block; }
+
+        /* ── Page Header ── */
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .page-header h1 {
+            font-size: 2.2em;
+            color: #5a3a1a;
+            margin-bottom: 5px;
+        }
+        .page-header .saints-line {
+            font-size: 1.2em;
+            color: #7a5a3a;
+            font-weight: normal;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .page-header .readings-list {
+            font-size: 1.05em;
+            color: #7a5a3a;
+            font-style: italic;
+        }
+        hr.section-divider {
+            border: none;
+            border-top: 2px solid #b89968;
+            margin: 30px 0;
+        }
+
+        /* ── Content Sections ── */
+        .section-block {
+            margin-bottom: 30px;
+            background-color: #fefefe;
+            padding: 22px 24px;
+            border-left: 4px solid #9b7653;
+            border-radius: 4px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .section-block.introduction {
+            border-left-color: #2a5a8a;
+            background: linear-gradient(to right, #f4f7fb, #fefefe);
+        }
+        .section-block.saints {
+            border-left-color: #b8860b;
+            background: linear-gradient(to right, #fdf8ee, #fefefe);
+        }
+        .section-block.reading-1 { border-left-color: #8b4513; }
+        .section-block.reading-2 { border-left-color: #2e7d32; }
+        .section-block.reading-3 { border-left-color: #5c3a8e; }
+        .section-block.reading-4 { border-left-color: #c62828; }
+        .section-block.references {
+            border-left-color: #757575;
+            background-color: #f9f7f4;
+        }
+        .section-title {
+            font-size: 1.45em;
+            color: #5a3a1a;
+            margin-bottom: 14px;
+            border-bottom: 2px solid #d4c5a9;
+            padding-bottom: 8px;
+        }
+        .reading-ref {
+            font-size: 0.88em;
+            color: #8b6f47;
+            font-style: italic;
+        }
+        .section-content {
+            line-height: 1.9;
+            text-align: justify;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .section-content p {
+            margin-bottom: 14px;
+        }
+        .references-list {
+            padding-left: 25px;
+            line-height: 1.8;
+        }
+        .references-list li {
+            margin-bottom: 8px;
+            color: #4a4a4a;
+        }
+
+        /* ── Disclaimer ── */
+        .disclaimer {
+            margin-top: 3em;
+            padding: 1.4em;
+            background-color: #f8f9fa;
+            border-left: 4px solid #2a5a8a;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-style: italic;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            body { padding: 12px; }
+            .font-controls { flex-direction: column; gap: 10px; }
+            .section-block { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Font & Language Controls -->
+    <div class="font-controls">
+        <div>
+            <label for="fontFamily">Γραμματοσειρά:</label>
+            <select id="fontFamily">
+                <option value="'Georgia', 'Times New Roman', serif">Georgia</option>
+                <option value="'Times New Roman', Times, serif">Times New Roman</option>
+                <option value="'Palatino Linotype', 'Book Antiqua', Palatino, serif">Palatino</option>
+                <option value="'Garamond', serif">Garamond</option>
+                <option value="'Baskerville', serif">Baskerville</option>
+                <option value="'Cambria', serif">Cambria</option>
+                <option value="Arial, Helvetica, sans-serif">Arial</option>
+                <option value="'Courier New', Courier, monospace">Courier</option>
+            </select>
+        </div>
+        <div>
+            <label for="fontSize">Μέγεθος:</label>
+            <input type="range" id="fontSize" min="12" max="28" value="16" step="1">
+            <span id="fontSizeValue">16px</span>
+        </div>
+        <div>
+            <button id="langToggle" class="lang-toggle" title="Switch language">
+                🇬🇧 English
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent">
+        <div class="page-header">
+  <h1>Κυριακή 15 Μαρτίου 2026</h1>
+  <h2 class="saints-line">Γ΄ ΝΗΣΤΕΙΩΝ (Σταυροπροσκυνήσεως)</h2>
+  <p class="readings-list">Κατὰ Ἰωάννην 20:1 – 10 &nbsp;•&nbsp; Πρὸς Εβραίους 4:14 – 16, 5:1 – 6 &nbsp;•&nbsp; Κατὰ Μᾶρκον 8:34 – 9:1</p>
+</div>
+<hr class="section-divider">
+<div class="section-block introduction lang-el">
+<h2 class="section-title">Εισαγωγή στην Ημέρα</h2>
+<div class="section-content"><p>Αγαπητοί μου αδελφοί και αδελφές εν Χριστώ,</p><p>Σήμερα, την Γ΄ Κυριακή των Νηστειών, φτάνουμε στο μέσον της πορείας μας προς το Πάσχα, και η Εκκλησία μας προβάλλει ενώπιόν μας το Τίμιο και Ζωοποιό Σταυρό του Κυρίου. Αυτή η Κυριακή της Σταυροπροσκυνήσεως αποτελεί μια πνευματική όαση, μια ανάσα ζωής και ενδυνάμωσης μέσα στο επίπονο, αλλά σωτήριο, ταξίδι της Μεγάλης Τεσσαρακοστής. Ο Σταυρός, σύμβολο της θυσίας και της αγάπης του Θεού, τίθεται μπροστά μας όχι για να μας θυμίσει το θάνατο, αλλά για να μας προσφέρει ελπίδα και δύναμη να συνεχίσουμε τον αγώνα μας, τη βεβαιότητα ότι ο δρόμος της νηστείας και της μετανοίας οδηγεί στη ζωή και στη νίκη κατά της αμαρτίας.</p><p>Τα αναγνώσματα της ημέρας συνδέονται θεματικά με αυτή τη βαθιά αλήθεια. Ο Ευαγγελιστής Μάρκος μας καλεί: <strong>«Εἴ τις θέλει ὀπίσω μου ἐλθεῖν, ἀπαρνησάσθω ἑαυτὸν καὶ ἀράτω τὸν σταυρὸν αὐτοῦ καὶ ἀκολουθείτω μοι»</strong> (Μάρκ. 8:34). Πρόκειται για την πρόσκληση σε αυτοθυσία και αυταπάρνηση, ακολουθώντας τον σταυρωθέντα Χριστό. Η επιστολή προς Εβραίους μας υπενθυμίζει τον Κύριο ως Μεγάλο Αρχιερέα, που <strong>«οὐκ ἔχομεν ἀρχιερέα μὴ δυνάμενον συμπαθῆσαι ταῖς ἀσθενείαις ἡμῶν, πεπειραμένον δὲ κατὰ πάντα καθ᾽ ὁμοιότητα χωρὶς ἁμαρτίας»</strong> (Εβρ. 4:15), ο οποίος έζησε τον πόνο και μπορεί να μας ενισχύσει. Και ενώ ο Σταυρός φαντάζει ως τέλος, το Ευαγγέλιο του Ιωάννη μας δίνει μια γεύση της νίκης που ακολουθεί. Η σκηνή του κενού τάφου <strong>«καὶ ἀποβλέπει τὰ ὀθόνια κείμενα»</strong> (Ιωάν. 20:5) μας θυμίζει ότι ο Σταυρός δεν είναι απλά όργανο θανάτου, αλλά ο δρόμος προς τη Ζωή, με την Ανάσταση ως καρπό της Σταυρικής θυσίας και τελική μας ελπίδα.</p><p>Η Εκκλησία μας καλεί σήμερα να προσκυνήσουμε με ευλάβεια τον Σταυρό, όχι ως απλό ξύλο, αλλά ως σύμβολο της ανυπέρβλητης αγάπης του Θεού και της απαρχής της σωτηρίας μας. Μας προτρέπει να ανανεώσουμε τον όρκο της πίστης μας, να αναλάβουμε συνειδητά τον δικό μας σταυρό – τις προσωπικές δοκιμασίες, τους αγώνες κατά των παθών, την υπομονή – και να ακολουθήσουμε τον Χριστό με γενναιότητα. Ο Σταυρός είναι πηγή χάριτος, παρηγοριά στον πόνο και φως στην απελπισία. Ας αντλήσουμε από αυτόν δύναμη για να ολοκληρώσουμε τις νηστείες, βαδίζοντας με πίστη προς την Ανάσταση, γνωρίζοντας ότι μέσα από τον Σταυρό έρχεται η χαρά και η αιώνια ζωή.</p></div>
+</div>
+<div class="section-block introduction lang-en">
+<h2 class="section-title">Introduction to the Day</h2>
+<div class="section-content"><p>Today, Κυριακή 15 Μαρτίου 2026, marks the Third Sunday of Great Lent, known as the Sunday of the Veneration of the Cross. We stand at the heart of our forty-day journey towards Pascha, and the Holy Church, in her profound wisdom, places before us the life-giving Cross as both an emblem of strength and a beacon of hope. This is a moment of profound spiritual refreshment, an oasis amidst the desert of our Lenten efforts. The venerable Cross is brought into the center of the church, not as a sign of despair or defeat, but as a glorious trophy of Christ's victory over sin and death, reminding us that through suffering comes salvation, and through sacrifice, eternal life. It is a vital signpost, invigorating our faltering spirits and reaffirming the purpose of our ascetic struggle as we continue our ascent to the Lord’s Resurrection.</p><p>The liturgical readings for this day are meticulously chosen to illuminate this path. In the Gospel of Mark (8:34-9:1), Christ issues His demanding yet liberating call: <strong>"If anyone desires to come after Me, let him deny himself, and take up his cross, and follow Me."</strong> This is the direct challenge to us, the faithful, to embrace our own struggles and self-denial as active participation in His salvific work. The Epistle from Hebrews (4:14-16, 5:1-6) beautifully complements this, presenting Christ as our compassionate Great High Priest who <strong>"in all things was tempted as we are, yet without sin."</strong> His own suffering on the Cross is precisely what makes Him able to sympathize with our weaknesses, offering us grace and mercy. While the Matins Gospel (John 20:1-10) describes the empty tomb, it subtly reminds us that the Cross is never an end in itself, but the glorious precursor to the Resurrection. Thus, the Church invites us to gaze upon the Cross with renewed spiritual vision, drawing strength from it to embrace the remainder of Great Lent with courage, understanding our efforts as bearing a small cross in anticipation of the great joy of Pascha, and allowing it to reorient our hearts towards Christ and His glorious Resurrection.</p></div>
+</div>
+<div class="section-block saints lang-el">
+<h2 class="section-title">Εορταζόμενοι Άγιοι</h2>
+<div class="section-content"><p>Αγαπητοί μου αδελφοί εν Χριστώ,</p><p>Ενώ σήμερα, την Γ' Κυριακή των Νηστειών, η καρδιά της Εκκλησίας μας στρέφεται με ευλάβεια προς τον Τίμιο και Ζωοποιό Σταυρό του Κυρίου, που τίθεται σε προσκύνηση ως παρηγοριά και ενδυνάμωση στο μέσο της Μεγάλης Τεσσαρακοστής, δεν λησμονούμε και τους Αγίους που κάθε ημέρα η Εκκλησία μας τιμά. Αυτοί οι Άγιοι, με τη ζωή και το μαρτύριό τους, αποτελούν ζωντανά παραδείγματα της δύναμης του Σταυρού και της αφοσίωσης στον Χριστό. Σήμερα, 15 Μαρτίου, μεταξύ άλλων, τιμούμε τη μνήμη του Αγίου Ιερομάρτυρος Αγαπητού, Επισκόπου Σινάου, καθώς και του Οσιομάρτυρος Νικηφόρου.</p><p>Ο Άγιος Αγαπητός έζησε τον 4ο αιώνα και υπηρέτησε ως επίσκοπος στην πόλη Σινάου της Φρυγίας. Ήταν ένας φωτισμένος ποιμένας, γεμάτος αγάπη για τον Χριστό και το ποίμνιό του. Αν και δεν υπέστη μαρτυρικό θάνατο με την έννοια της εκτέλεσης, η ζωή του ήταν ένα συνεχές μαρτύριο και μία ομολογία πίστεως εν μέσω των διωγμών. Με θάρρος και ακλόνητη πίστη, ομολόγησε τον Χριστό μπροστά στις αρχές, υπερασπιζόμενος την αλήθεια της Ορθοδοξίας και ενισχύοντας τους πιστούς να παραμείνουν σταθεροί. Η αγία του πολιτεία και η ποιμαντική του φροντίδα τον καθιστούν ένα λαμπρό παράδειγμα ιεράρχη. Ο δε Όσιος Νικηφόρος, ακολουθώντας τον μοναχικό βίο, αφιερώθηκε ολοκληρωτικά στον Θεό, φτάνοντας και αυτός στο μαρτύριο της συνείδησης και ενδεχομένως του σώματος, με την ομολογία της πίστεως.</p><p>Η πνευματική σημασία της ζωής των Αγίων Αγαπητού και Νικηφόρου είναι τεράστια για εμάς τους πιστούς. Μας διδάσκουν ότι η χριστιανική ζωή είναι ένας συνεχής αγώνας και μια ομολογία, είτε μέσα από το μαρτύριο του αίματος είτε μέσα από την καθημερινή προσπάθεια να ζούμε σύμφωνα με το θέλημα του Θεού. Η ακλόνητη πίστη τους, η υπομονή τους στις δοκιμασίες και η αφοσίωσή τους στον Χριστό, αποτελούν ένα φάρο που φωτίζει τον δρόμο μας. Μας υπενθυμίζουν ότι η πραγματική ελευθερία βρίσκεται στην υπακοή στον Θεό και ότι η σταθερότητα στην πίστη, ακόμη και όταν όλα γύρω μας μοιάζουν να καταρρέουν, είναι το κλειδί για την αιώνια ζωή. Η θυσιαστική τους αγάπη και η γενναιότητά τους μας καλούν να αναλάβουμε και εμείς τον δικό μας σταυρό, ακολουθώντας τον Κύριο.</p></div>
+</div>
+<div class="section-block saints lang-en">
+<h2 class="section-title">Saints Celebrated Today</h2>
+<div class="section-content"><p>Dear brothers and sisters in Christ,</p><p>As we reach the midpoint of Great Lent, the Church places before us, for our veneration and spiritual strength, not merely a person but the very instrument of our salvation: the Precious and Life-Giving Cross of our Lord Jesus Christ. Today, on the Third Sunday of the Fasts, we celebrate the Holy Cross itself, recognizing it as the ultimate "saint"—the holy object sanctified by the Blood of God Incarnate. It is not simply a piece of wood, but the Tree of Life, through which death has been swallowed up by life. This sacred symbol, once an emblem of torture and shame, has been transformed by Christ’s sacrifice into the banner of our victory, a sign of hope, and the means of our eternal life.</p><p>The "life and ministry" of the Holy Cross is intimately bound with the redemptive work of our Savior. It stands as the unwavering witness to Christ's ultimate act of love, His willing sacrifice on Golgotha. It was on the Cross that He bore the sins of the world, conquering death by death, and opening the gates of Paradise once more. As the Apostle Paul declares, <strong>"For the message of the cross is foolishness to those who are perishing, but to us who are being saved it is the power of God"</strong> (1 Corinthians 1:18). In its silent "ministry," the Cross ever points us to the empty tomb and the radiant promise of the Resurrection, a truth beautifully hinted at in the Gospel account of the empty tomb in <strong>John 20:1-10</strong>. It assures us that suffering is not the end, but a path to glory.</p><p>For us, the faithful, the spiritual significance of the Holy Cross is profound and multifaceted. It is a constant call to humility, self-sacrifice, and endurance in our spiritual struggle, especially during this Lenten journey. It reminds us of Christ’s invitation: <strong>"Whoever desires to come after Me, let him deny himself, and take up his cross, and follow Me"</strong> (Mark 8:34). By venerating the Cross, we are not worshipping the wood, but Him Who was crucified thereon. We draw strength from it to bear our own daily crosses—our struggles, temptations, and sufferings—with hope and patience, knowing that the path of the Cross leads to the Light of the Resurrection. It stands as our unwavering beacon, guiding us towards the eternal kingdom of God.</p></div>
+</div>
+<div class="section-block reading-1 lang-el">
+<h2 class="section-title">Ευαγγέλιο Όρθρου <span class="reading-ref">(Κατὰ Ἰωάννην 20:1 – 10)</span></h2>
+<div class="section-content"><p>Αγαπητοί αδελφοί εν Χριστώ,</p><p>Στη μέση της Αγίας και Μεγάλης Τεσσαρακοστής, η Εκκλησία μας στήνει τον Τίμιο Σταυρό στο κέντρο του ναού, όχι ως σύμβολο πένθους, αλλά ως σημείο ελπίδας και ζωής. Την τρίτη αυτή Κυριακή των Νηστειών, την Κυριακή της Σταυροπροσκυνήσεως, μας καλεί να δούμε τον Σταυρό ως το δέντρο της ζωής, ως το σκαλοπάτι προς την Ανάσταση. Εν μέσω των αναγνωσμάτων της ημέρας, μας δίνεται ένα απόσπασμα από το Ευαγγέλιο του Ιωάννη (20:1-10) που μας μεταφέρει στις πρώτες στιγμές μετά την Ανάσταση του Κυρίου. Η Μαρία η Μαγδαληνή φτάνει στον τάφο πρωί-πρωί και τον βρίσκει ανοιχτό. Τρέχει αμέσως στον Πέτρο και τον Ιωάννη, λέγοντας: <strong>«Ἦραν τὸν Κύριον ἐκ τοῦ μνημείου, καὶ οὐκ οἴδαμεν ποῦ ἔθηκαν αὐτόν.»</strong> (Ιωάν. 20:2). Οι δύο μαθητές σπεύδουν στον τάφο και βλέπουν τα οθόνια και το σουδάριο, αλλά όχι το Σώμα του Κυρίου. Ο Ιωάννης βλέπει και πιστεύει, ενώ ακόμα δεν είχαν κατανοήσει πλήρως τη Γραφή περί Αναστάσεως.</p><p>Το απόσπασμα αυτό, αν και αναφέρεται ευθέως στην Ανάσταση, έχει μια βαθιά θεολογική και πνευματική σημασία για την πορεία της Σαρακοστής. Μας δείχνει την πρώτη αντίδραση των μαθητών μπροστά στο κενό μνημείο: μια μίξη σύγχυσης, φόβου, αλλά και μιας αρχόμενης πίστης, ειδικά στην περίπτωση του αγαπημένου μαθητή Ιωάννη, ο οποίος <strong>«εἶδε καὶ ἐπίστευσεν»</strong> (Ιωάν. 20:8) όχι επειδή είδε τον Αναστάντα Χριστό, αλλά επειδή είδε τα σημεία, τα τακτοποιημένα ενδύματα. Αυτό υπογραμμίζει τη δύναμη της πίστης που ξεπερνά την απλή ορατότητα και διακρίνει το θαύμα ακόμη και μέσα από την απουσία. Όπως τονίζει ο Άγιος Ιωάννης ο Χρυσόστομος, η τάξη των ενδυμάτων μέσα στον κενό τάφο αποτελεί ισχυρότατη μαρτυρία για την ανάσταση, καθώς αποκλείει το ενδεχόμενο κλοπής του σώματος.</p><p>Πώς, όμως, συνδέεται αυτή η ευαγγελική περικοπή, που μιλά για την Ανάσταση, με την Κυριακή της Σταυροπροσκυνήσεως και τα άλλα αναγνώσματα της ημέρας, τα οποία επικεντρώνονται στον Σταυρό και τη θυσία (Μάρκ. 8:34-9:1) και στην αρχιερατική ιδιότητα του Χριστού (Εβρ. 4:14-16, 5:1-6); Η Εκκλησία, με την σοφή της παιδαγωγία, τοποθετεί αυτό το ανάγνωσμα για την Ανάσταση στο μέσο της Σαρακοστής, για να μας υπενθυμίσει τον τελικό σκοπό του σταυρικού αγώνα. Ο Σταυρός δεν είναι αυτοσκοπός, αλλά το μέσο για την Ανάσταση. Η πορεία της νηστείας, της μετάνοιας, της αυτοθυσίας, που μας καλεί να ακολουθήσουμε ο Χριστός λέγοντας <strong>«εἴ τις θέλει ὀπίσω μου ἐλθεῖν, ἀπαρνησάσθω ἑαυτὸν καὶ ἀράτω τὸν σταυρὸν αὐτοῦ, καὶ ἀκολουθείτω μοι»</strong> (Μάρκ. 8:34), δεν οδηγεί στην απόγνωση, αλλά στην αιώνια ζωή. Είναι σαν ένα δείγμα, μια πρόγευση της Πασχαλινής χαράς, μια οπτική στον ορίζοντα που μας ενδυναμώνει να συνεχίσουμε τον αγώνα μας.</p><p>Το μήνυμα που θέλει να μεταδώσει η Εκκλησία στους πιστούς είναι μήνυμα ελπίδας και ενθάρρυνσης. Μέσα στην κόπωση του πνευματικού αγώνα της Σαρακοστής, η Εκκλησία μας δείχνει τον Σταυρό ως σύμβολο νίκης και όχι ήττας, και μας θυμίζει ότι πίσω από κάθε θυσία, κάθε άρνηση του εαυτού, κάθε σταυρό που σηκώνουμε, βρίσκεται η δόξα της Αναστάσεως. Όπως οι μαθητές στον κενό τάφο, καλούμαστε να πιστέψουμε στο αόρατο, να εμπιστευτούμε τη δύναμη του Θεού που μετατρέπει τον θάνατο σε ζωή, την ήττα σε θρίαμβο. Ας αντλήσουμε δύναμη από αυτή την ελπίδα, για να συνεχίσουμε με θάρρος τον αγώνα μας, έχοντας πάντα κατά νου ότι ο Σταυρός είναι η πύλη προς την Ανάσταση.</p></div>
+</div>
+<div class="section-block reading-1 lang-en">
+<h2 class="section-title">Orthros Gospel <span class="reading-ref">(Κατὰ Ἰωάννην 20:1 – 10)</span></h2>
+<div class="section-content"><p>My beloved brothers and sisters in Christ, as we continue our fervent journey through Great Lent, the Church places before us today, on this Third Sunday of the Fasts, known as the Sunday of the Veneration of the Cross, a most profound reading from the Gospel according to St. John (20:1-10). This passage transports us to the dawn of Pascha, describing the very first moments after Christ's Resurrection. Mary Magdalene, overcome with love and grief, visits the tomb early on Sunday morning, only to find the stone rolled away and the tomb empty. Distraught, she runs to Simon Peter and the beloved disciple, proclaiming, <strong>"They have taken away the Lord out of the tomb, and we do not know where they have laid Him."</strong> Peter and John then rush to the tomb themselves. John, outrunning Peter, looks in, but Peter enters first, seeing the linen cloths lying by themselves and the napkin that had been around Jesus’ head folded in a place by itself. Then John also entered, and he <strong>"saw and believed,"</strong> for as the evangelist notes, <strong>"they did not yet know the Scripture, that He must rise again from the dead."</strong></p><p>Theologically, this passage is foundational, presenting the empty tomb as the undeniable, initial physical proof of Christ’s Resurrection. Mary Magdalene's anguish highlights the human expectation of death's finality, while the disciples' subsequent investigation begins their journey from confusion to nascent faith. St. John Chrysostom notes the significance of the beloved disciple's immediate belief: "He did not wait for Peter, but entered. He saw the linen clothes, and believed; for love is quick to believe, and receives impressions more rapidly than a mind free from emotion." (Homily 85 on John). The precise arrangement of the burial clothes – the linens lying "by themselves" and the napkin neatly folded – are not signs of a hurried robbery, but quiet witnesses to a miraculous, orderly departure, leaving the disciples to ponder a reality beyond their immediate comprehension. This narrative underscores that the Resurrection, though initially baffling, calls for a new way of seeing, a new understanding that transcends mere material evidence.</p><p>How, then, does this Paschal reading fit into the heart of our Lenten journey, specifically on the Sunday of the Veneration of the Cross? Today, we are called to <strong>"take up [our] cross"</strong> and follow Christ, as we heard in the Gospel of Mark (8:34-9:1). This path of self-denial and suffering, though necessary, is not an end in itself. The empty tomb, presented to us today, is the glorious *fruit* of that Cross, the ultimate guarantee that Christ's sacrifice was not a defeat, but a triumphant victory over death. It assures us that our own Lenten struggles, our embrace of the Cross, are not unto despair, but unto the hopeful reality of new life. Furthermore, Hebrews (4:14-16; 5:1-6) speaks of Christ as our Great High Priest, who suffered yet without sin, making His sacrifice perfect. The empty tomb is the proof of the efficacy of His High Priesthood and His ultimate triumph.</p><p>The message the Church wants us to take away is one of unwavering hope and encouragement. By placing the empty tomb before us now, in the midst of the fasting period, the Church reminds us that our spiritual struggles are not in vain. The Cross we venerate today is not merely a symbol of suffering, but the instrument of our salvation, leading directly to the joyous, life-giving reality of the Resurrection. St. Cyril of Jerusalem emphatically declared, "The empty tomb is the greatest proof of the Resurrection" (Catechetical Lectures 14.15). Let this vision of the empty tomb strengthen our resolve, fortify our spirits, and fill us with Paschal joy even now, as we continue to bear our crosses, confident in the promise of Christ's ultimate victory and our own resurrection. Amen.</p></div>
+</div>
+<div class="section-block reading-2 lang-el">
+<h2 class="section-title">Απόστολος Θείας Λειτουργίας <span class="reading-ref">(Πρὸς Εβραίους 4:14 – 16, 5:1 – 6)</span></h2>
+<div class="section-content"><p>Αγαπητοί μου αδελφοί εν Χριστώ,</p><p>Η σημερινή Κυριακή, της Σταυροπροσκυνήσεως, μας βρίσκει στο μέσον της Μεγάλης Τεσσαρακοστής, εστιάζοντας το βλέμμα μας στον Τίμιο Σταυρό, πηγή δυνάμεως και ελπίδας. Το αποστολικό ανάγνωσμα από την προς Εβραίους Επιστολή (4:14-16, 5:1-6) φωτίζει με μοναδικό τρόπο το πρόσωπο του Κυρίου ημών Ιησού Χριστού ως του «μεγάλου Αρχιερέως» της Καινής Διαθήκης. Ο συγγραφέας της Επιστολής παρουσιάζει τον Χριστό όχι απλώς ως έναν ενάρετο άνθρωπο, αλλά ως τον Υιό του Θεού που <strong>«διεληλυθότα τοὺς οὐρανούς»</strong>, δηλαδή έχει περάσει μέσα από τους ουρανούς, ανεβάζοντας την ανθρώπινη φύση στα δεξιά του Πατρός. Αυτή η αρχιερατική ιδιότητα του Χριστού είναι η ύψιστη, ανώτερη από κάθε επίγεια ιερωσύνη, καθώς είναι ταυτόχρονα Θεός και άνθρωπος. Το κείμενο θέτει τη βάση για να κατανοήσουμε την ιδιαιτερότητα της αρχιερατικής του διακονίας, η οποία είναι εντελώς διαφορετική από αυτή των αρχιερέων της Παλαιάς Διαθήκης.</p><p>Ένα από τα κεντρικά θεολογικά θέματα του αποσπάσματος είναι η συμπόνια και η κατανόηση του Χριστού προς την ανθρώπινη αδυναμία. Ο Απόστολος τονίζει ότι ο Χριστός είναι Αρχιερέας <strong>«μὴ δυνάμενον συμπαθῆσαι ταῖς ἀσθενείαις ἡμῶν, πεπειρασμένον δὲ κατὰ πάντα καθ’ ὁμοιότητα χωρὶς ἁμαρτίας»</strong>. Δηλαδή, δεν είναι ένας Αρχιερέας που δεν μπορεί να συμπάσχει με τις αδυναμίες μας, αλλά ένας που δοκιμάστηκε σε όλα όπως εμείς, χωρίς όμως να αμαρτήσει. Αυτή η αλήθεια είναι ιδιαίτερα παρηγορητική για τον αγωνιζόμενο πιστό. Όπως ερμηνεύει ο Άγιος Ιωάννης ο Χρυσόστομος, ο Χριστός «εδοκιμάσθη, ουχί αμαρτήσας, αλλά γνωρίσας τας δοκιμασίας» (Εις Εβραίους, Ομιλία Η΄). Γνωρίζει τις δοκιμασίες μας από προσωπική εμπειρία, όχι από θεωρία. Αυτό μας επιτρέπει να πλησιάσουμε <strong>«μετὰ παρρησίας τῷ θρόνῳ τῆς χάριτος»</strong>, με τόλμη και εμπιστοσύνη στον Θεό, γνωρίζοντας ότι θα λάβουμε έλεος και χάρη σε κάθε ανάγκη μας. Επιπλέον, το κείμενο εξηγεί ότι ο Χριστός δεν έλαβε την τιμή της αρχιερωσύνης από μόνος του, αλλά κλήθηκε από τον Θεό, <strong>«καθὼς καὶ ἐν ἑτέρῳ λέγει· Σὺ ἱερεὺς εἰς τὸν αἰῶνα κατὰ τὴν τάξιν Μελχισεδέκ»</strong> (Ψαλμ. 109:4). Αυτό υπογραμμίζει την αιώνια και μοναδική φύση της ιερωσύνης Του, η οποία δεν είναι φθαρτή ή προσωρινή όπως η Λευϊτική.</p><p>Αυτό το απόσπασμα συνδέεται αρμονικά με την Κυριακή της Σταυροπροσκυνήσεως και τα άλλα αναγνώσματα της ημέρας. Η ανάδειξη του Χριστού ως του συμπονετικού Αρχιερέως που προσέφερε τον εαυτό Του για τη σωτηρία μας, βρίσκει την κορύφωσή της στη θυσία του Σταυρού. Ο Σταυρός δεν είναι μόνο σύμβολο πόνου, αλλά και της υπέρτατης αγάπης και της αρχιερατικής διακονίας του Χριστού. Είναι το μέσο με το οποίο ο Μεγάλος Αρχιερέας μας «πέρασε από τους ουρανούς» και άνοιξε τον δρόμο για να πλησιάσουμε τον Θρόνο της Χάριτος. Το Ευαγγελικό ανάγνωσμα της ημέρας από τον Μάρκο (8:34-9:1), όπου ο Κύριος καλεί τους πιστούς να <strong>«ἀπαρνησάσθω ἑαυτὸν καὶ ἀράτω τὸν σταυρὸν αὐτοῦ καὶ ἀκολουθείτω μοι»</strong>, βρίσκει βαθύτερο νόημα υπό το πρίσμα του αρχιερατικού έργου του Χριστού. Εκείνος, ο Αρχιερέας, πρώτος πήρε τον Σταυρό και προσέφερε την τέλεια θυσία, γνωρίζοντας τις αδυναμίες μας. Η Εκκλησία, φέρνοντας τον Σταυρό στο προσκήνιο αυτή την Κυριακή, θέλει να μας υπενθυμίσει ότι ο Χριστός, ο συμπαθής Αρχιερέας μας, είναι ο εγγυητής της σωτηρίας μας. Μας ενθαρρύνει να αντλήσουμε δύναμη από τον Σταυρό Του, να Τον ακολουθήσουμε στην οδό της θυσίας και της αγάπης, με την βεβαιότητα ότι έχουμε έναν Αρχιερέα που κατανοεί τις δυσκολίες μας και μας προσφέρει απλόχερα έλεος και χάρη για να συνεχίσουμε τον αγώνα της Μεγάλης Τεσσαρακοστής και της πνευματικής μας ζωής.</p></div>
+</div>
+<div class="section-block reading-2 lang-en">
+<h2 class="section-title">Apostle of the Divine Liturgy <span class="reading-ref">(Πρὸς Εβραίους 4:14 – 16, 5:1 – 6)</span></h2>
+<div class="section-content"><p>On this third Sunday of Great Lent, the Sunday of the Veneration of the Cross, the Epistle reading from Hebrews 4:14-16 and 5:1-6 presents our Lord Jesus Christ as the ultimate and perfect High Priest. The passage first emphasizes His compassionate nature, stressing that because He has <strong>"passed through the heavens"</strong> and yet <strong>"was in all points tempted as we are, yet without sin,"</strong> we can <strong>"come boldly to the throne of grace, that we may obtain mercy and find grace to help in time of need."</strong> It then elaborates on the necessary qualifications for a high priest, noting that he must be <strong>"taken from among men,"</strong> be able <strong>"to have compassion on those who are ignorant and going astray,"</strong> and be appointed by God. The passage concludes by affirming that Christ perfectly fulfills this role, not by earthly lineage, but by divine appointment, becoming a priest forever <strong>"according to the order of Melchizedek,"</strong> signifying a priesthood superior to the Mosaic Law.</p><p>The key theological and spiritual themes here revolve around Christ’s unique High Priesthood, which is both divine and profoundly human. His empathy is paramount: He truly understands our struggles, temptations, and weaknesses, having experienced them Himself, albeit without sin. This shared human experience means He is not a distant, unfeeling God, but one who genuinely sympathizes with our frailty, as St. John Chrysostom often teaches, highlighting Christ's condescension for our salvation. This understanding empowers us to approach God with confidence, knowing that Christ’s intercession ensures we will <strong>"obtain mercy and find grace."</strong> Furthermore, Christ's priesthood is eternally effective and divinely ordained, transcending the limitations of the Old Covenant. He is the one who perfectly offers the sacrifice for sins, making Him the perfect mediator between God and humanity.</p><p>This Epistle reading profoundly connects with the other liturgical texts of this crucial Sunday. The Gospel of Mark (8:34-9:1) challenges us directly: <strong>"Whoever desires to come after Me, let him deny himself, and take up his cross, and follow Me."</strong> How can we possibly fulfill such a demanding command? The Epistle provides the answer and the strength. Our High Priest, Christ, did not merely *command* us to take up the Cross; He Himself, in His priestly capacity, first bore the ultimate Cross, offering Himself as the perfect sacrifice for us. Because He has been tempted and suffered, He is merciful and can provide the grace we need to follow Him. The Cross we venerate today is not simply a symbol of suffering, but the very altar upon which our sympathetic High Priest offered the propitiatory sacrifice that grants us access to God's grace and mercy. The John 20:1-10 reading, typically read at Matins, further underscores the triumph of Christ's priestly work, revealing the empty tomb as the validation of His sacrifice and resurrection, through which He continually intercedes for us from the heavens.</p><p>The Church’s message to the faithful on this Sunday is one of profound encouragement and hope in the midst of Great Lent. We are reminded that our journey through fasting, prayer, and self-denial is not one we undertake alone or unaided. We have a powerful, compassionate, and eternally interceding High Priest in Jesus Christ, who understands our weaknesses and provides the grace we need. The veneration of the Cross, therefore, is not merely an acknowledgement of suffering, but a celebration of the source of our salvation, the wellspring of divine mercy, and the ultimate act of love by our High Priest who enables us to carry our own crosses with steadfastness, knowing that we have <strong>"boldness to enter the Holiest by the blood of Jesus"</strong> (Hebrews 10:19).</p></div>
+</div>
+<div class="section-block reading-3 lang-el">
+<h2 class="section-title">Ευαγγέλιο Θείας Λειτουργίας <span class="reading-ref">(Κατὰ Μᾶρκον 8:34 – 9:1)</span></h2>
+<div class="section-content"><p>Αγαπητοί μου αδελφοί και αδελφές εν Χριστώ,</p><p>Στη μέση της πορείας της Μεγάλης Τεσσαρακοστής, η Αγία μας Εκκλησία μάς καλεί σήμερα, Γ΄ Κυριακή των Νηστειών, να προσκυνήσουμε τον Τίμιο και Ζωοποιό Σταυρό. Αυτή η λειτουργική ημέρα μάς υπενθυμίζει τον κεντρικό ρόλο του Σταυρού όχι μόνο ως συμβόλου σωτηρίας, αλλά και ως του αναπόφευκτου δρόμου για κάθε πιστό που επιθυμεί να ακολουθήσει τον Χριστό. Το σημερινό ευαγγελικό ανάγνωσμα, από το Κατά Μάρκον (8:34-9:1), αποτελεί μια άμεση πρόσκληση του Κυρίου προς όλους μας. Ο Κύριος, αμέσως μετά την πρώτη Του πρόβλεψη για τα Πάθη Του, καλεί το πλήθος μαζί με τους μαθητές και δηλώνει: <strong>«Εἴ τις θέλει ὀπίσω μου ἐλθεῖν, ἀπαρνησάσθω ἑαυτὸν καὶ ἀράτω τὸν σταυρὸν αὐτοῦ καὶ ἀκολουθείτω μοι»</strong>. Εν συνεχεία, θέτει το παράδοξο της χριστιανικής ζωής: <strong>«ὃς γὰρ ἂν θέλῃ τὴν ψυχὴν αὐτοῦ σῶσαι ἀπολέσει αὐτήν, ὃς δ’ ἂν ἀπολέσῃ τὴν ψυχὴν αὐτοῦ ἕνεκεν ἐμοῦ καὶ τοῦ εὐαγγελίου σώσει αὐτήν»</strong>. Μας προειδοποιεί εμφατικά: <strong>«τί γὰρ ὠφελήσει ἄνθρωπον ἐὰν κερδήσῃ τὸν κόσμον ὅλον καὶ ζημιωθῇ τὴν ψυχὴν αὐτοῦ;»</strong>, υπογραμμίζοντας την απόλυτη αξία της ψυχής έναντι κάθε επίγειου αποκτήματος.</p><p>Το κεντρικό μήνυμα αυτού του αποσπάσματος είναι η ριζική αυτοθυσία και δέσμευση που απαιτεί η μαθητεία του Χριστού. Το <strong>«ἀπαρνησάσθω ἑαυτὸν»</strong> δεν είναι απλώς η εγκατάλειψη αμαρτωλών συνηθειών, αλλά η ολοκληρωτική απόρριψη του εγωκεντρικού μας θελήματος και των προσωπικών μας επιθυμιών που αντιτίθενται στο θέλημα του Θεού. Ο Άγιος Ιωάννης ο Χρυσόστομος τονίζει ότι «ἀρνηθῆναι ἑαυτόν ἐστι τὸ μηδὲν ποιεῖν ἐξ οἰκείας γνώμης, ἀλλὰ πᾶσαν ἑαυτοῦ τὴν διάνοιαν τῷ Θεῷ ἀνατεθεικέναι». Το <strong>«ἀράτω τὸν σταυρὸν αὐτοῦ»</strong> δεν αναφέρεται σε μια συγκεκριμένη δοκιμασία, αλλά στην καθημερινή προθυμία να υποστούμε θλίψεις, ταλαιπωρίες και ακόμη και τον θάνατο για την πίστη μας, όπως ο Χριστός υπέμεινε τον Σταυρό. Αυτό το παράδοξο – της απώλειας της ζωής για να τη βρει κανείς – αποτελεί τον ακρογωνιαίο λίθο της ορθόδοξης πνευματικότητας: μόνο μέσα από τη νέκρωση του παλαιού ανθρώπου και των παθών, μπορεί να αναδυθεί ο νέος άνθρωπος, ζωντανός εν Χριστώ. Η ανεκτίμητη αξία της ψυχής μας καλεί σε διαρκή πνευματική μάχη για τη σωτηρία της.</p><p>Το ευαγγελικό αυτό ανάγνωσμα συνδέεται άρρηκτα με το αποστολικό ανάγνωσμα της ημέρας, από την Προς Εβραίους Επιστολή (4:14-16, 5:1-6). Ενώ ο Μάρκος μας καλεί να σηκώσουμε τον σταυρό μας, η Επιστολή μάς δείχνει τον Χριστό ως τον Αρχιερέα μας, ο Οποίος <strong>«οὐκ ἔχομεν ἀρχιερέα μὴ δυνάμενον συμπαθῆσαι ταῖς ἀσθενείαις ἡμῶν, πεπειραμένον δὲ κατὰ πάντα καθ’ ὁμοιότητα χωρὶς ἁμαρτίας»</strong>. Ο Κύριος μάς δίνει το παράδειγμα, έχοντας βιώσει κάθε πειρασμό και πόνο, και ως εκ τούτου μπορεί να μας ενισχύσει στον αγώνα μας. Μέσα από τα παθήματά Του, ο Χριστός <strong>«ἔμαθεν ἀφ’ ὧν ἔπαθεν τὴν ὑπακοήν»</strong> (5:8), διδάσκοντάς μας ότι η υπακοή επιτυγχάνεται μέσα από την αυτοθυσία και την υπομονή.
+Η τοποθέτηση του Σταυρού στο μέσο της Τεσσαρακοστής δεν είναι τυχαία. Η Εκκλησία, ως στοργική Μητέρα, γνωρίζει τις δυσκολίες του πνευματικού αγώνα. Γι’ αυτό, μας προβάλλει τον Σταυρό – ως σημείο δυνάμεως, ελπίδας και νίκης. Μας υπενθυμίζει ότι οι ασκητικοί μας αγώνες είναι μέσα για να απαρνηθούμε τον εαυτό μας, να σηκώσουμε τον σταυρό μας και να ακολουθήσουμε τον Χριστό στην πορεία προς την Ανάσταση. Ο Σταυρός είναι η εγγύηση ότι η θυσία δεν οδηγεί στην απώλεια, αλλά στην αληθινή ζωή, στην ένωση με τον Θεό.</p></div>
+</div>
+<div class="section-block reading-3 lang-en">
+<h2 class="section-title">Gospel of the Divine Liturgy <span class="reading-ref">(Κατὰ Μᾶρκον 8:34 – 9:1)</span></h2>
+<div class="section-content"><p>On this third Sunday of Great Lent, the Sunday of the Veneration of the Cross, the Church places before us the solemn and profound words of our Lord from <strong>Mark 8:34-9:1</strong>. Having just rebuked Peter for his misunderstanding of the Messiah's path to suffering, Christ turns to the crowds and His disciples, issuing a radical invitation to discipleship. He declares, <strong>"Whoever desires to come after Me, let him deny himself, and take up his cross, and follow Me. For whoever desires to save his life will lose it, but whoever loses his life for My sake and the gospel’s will save it."</strong> This passage is a stark call to self-sacrifice, prioritizing spiritual life over worldly gain, warning us against being ashamed of Him and His words, and concluding with a mysterious promise of seeing the Kingdom of God present with power. It immediately follows Christ's first prediction of His Passion and is a direct invitation for His followers to embrace the same path.</p><p>The theological and spiritual themes embedded in this reading are central to Orthodox life, especially during Great Lent. Christ's command to <strong>"deny himself"</strong> is not a call to self-hatred, but to renounce our egoistic desires, passions, and self-will, which separate us from God and our neighbor. <strong>"Take up his cross"</strong> signifies a willingness to embrace suffering, hardship, and even martyrdom for Christ's sake, as well as to crucify our passions daily. As St. John Chrysostom eloquently states, "To take up his cross implies to be ready for the very worst, for a thousand perils, for ignominious death; to wrestle with all these things, and not to flinch." This paradox of losing life to save it underscores that true life is found not in self-preservation or worldly comforts, but in sacrificial love for Christ and His Gospel. The rhetorical questions, <strong>"For what will it profit a man if he gains the whole world, and loses his own soul? Or what will a man give in exchange for his soul?"</strong>, emphasize the immeasurable value of the human soul and the futility of all earthly achievements if they come at the cost of one's eternal salvation.</p><p>This powerful Gospel reading is meticulously chosen for the Sunday of the Veneration of the Cross, serving as a pivotal reminder amidst our Lenten journey. The Cross, which we venerate today, is not merely a symbol of Christ’s past suffering but the very standard of our Christian life. It directly relates to the Epistle reading (Hebrews 4:14-16, 5:1-6), which presents Christ as our great High Priest, one who <strong>"can sympathize with our weaknesses, having been tempted in all points as we are, yet without sin."</strong> Christ, who Himself endured the ultimate cross, is our perfect prototype and compassionate guide as we strive to deny ourselves and take up our own crosses. The final verse, <strong>"Assuredly, I say to you that there are some standing here who will not taste death till they see the kingdom of God present with power,"</strong> traditionally interpreted as a reference to the Transfiguration (which immediately follows in the narrative) or the coming of the Holy Spirit and the establishment of the Church, serves as a promise of the glory that awaits those who faithfully follow the path of the Cross.</p><p>The Church’s message to the faithful today is one of profound encouragement and solemn invitation. As we venerate the Holy Cross, we are called to embrace the ascetical struggle of Lent not as a burden, but as the royal path to true freedom and eternal life. We are reminded that authentic discipleship demands self-denial and a readiness to suffer for Christ, knowing that His Cross is the tree of life and the source of our salvation. The path of the Cross, though challenging, is illuminated by the promise of the Kingdom, for it leads not to death, but to the joyous Resurrection and communion with God. Let us therefore take up our crosses with courage, following our Lord, the Great High Priest, knowing that through Him, we find mercy and grace to help in time of need.</p></div>
+</div>
+<div class="section-block references lang-el">
+<h2 class="section-title">Αναφορές και Παραπομπές</h2>
+<ol class="references-list">
+  <li>**Αγίου Ιωάννου του Χρυσοστόμου,** *Ομιλίαι εις το Κατά Μάρκον Ευαγγέλιον*, ειδικότερα οι Ομιλίες που πραγματεύονται το κεφάλαιο 8, στίχους 34-38 και το 9, στίχο 1, όπου αναλύεται η έννοια της άρσης του σταυρού και της ακολουθίας του Χριστού. Επίσης, *Ομιλίαι εις την Προς Εβραίους Επιστολήν*, για την ερμηνεία των αναγνωσμάτων 4:14-16 και 5:1-6.</li>
+  <li>**Αγίου Μαξίμου του Ομολογητού,** *Περί Αγάπης* (Τετρακοσίων Κεφαλαίων Περί Αγάπης), ιδιαίτερα κεφάλαια που σχετίζονται με την άσκηση, την αυτοάρνηση και τη μίμηση του Χριστού μέσω της εκούσιας ανάληψης του σταυρού των παθών, ως προϋπόθεση για τη θέωση.</li>
+  <li>**Το Τριώδιον,** *Κυριακή Γ΄ των Νηστειών, της Σταυροπροσκυνήσεως*. Το ίδιο το λειτουργικό βιβλίο περιέχει τα συναξάρια, τους κανόνες, τους ύμνους και τα ιδιόμελα που εξηγούν τη θεολογική σημασία της προσκύνησης του Τιμίου Σταυρού εν μέσω της νηστείας, ως σύμβολο ελπίδας και θριάμβου.</li>
+  <li>**π. Αλεξάνδρου Σμέμαν,** *Μεγάλη Τεσσαρακοστή: Η Πορεία προς το Πάσχα*. Το κεφάλαιο που είναι αφιερωμένο στην Κυριακή της Σταυροπροσκυνήσεως παρέχει μια βαθιά λειτουργική και θεολογική ανάλυση της θέσης αυτής της ημέρας στην περίοδο της Μεγάλης Τεσσαρακοστής.</li>
+  <li>**Μητροπολίτου Καλλίστου (Ware) Διοκλείας,** *Ο Ορθόδοξος Δρόμος*. Κεφάλαια που πραγματεύονται την ασκητική ζωή, τη σημασία του Σταυρού ως οδού προς την Ανάσταση, την αυτοθυσία και την εσωτερική βασιλεία, συνδέοντας τα με την ευαγγελική προτροπή του Κυρίου.</li>
+  <li>**Γεωργίου Ι. Μαντζαρίδη,** *Ορθόδοξη Πνευματική Ζωή*. Ενότητες που αναφέρονται στην ασκητική παράδοση της Εκκλησίας, την κάθαρση, τη νέκρωση των παθών και την ανάληψη του προσωπικού σταυρού ως βασικό στοιχείο της πνευματικής πορείας του πιστού.</li>
+  <li>**π. Θωμά Χόπκο,** *The Lenten Spring: Readings for Great Lent*. (Διαθέσιμο και σε ελληνική μετάφραση με τίτλο *Η Λεντιανή Άνοιξη*). Το κεφάλαιο που είναι αφιερωμένο στην Κυριακή της Σταυροπροσκυνήσεως προσφέρει πρακτικές και θεολογικές σκέψεις για την εφαρμογή του μηνύματος αυτής της ημέρας στην καθημερινή ζωή του Ορθοδόξου Χριστιανού.</li>
+  <li>**Αγίου Ιωάννου της Κλίμακος,** *Κλίμαξ*. Αν και δεν είναι άμεσο σχόλιο στα συγκεκριμένα αναγνώσματα, το έργο αυτό αποτελεί τον κατεξοχήν οδηγό για την ασκητική ζωή και την πνευματική άνοδο, με την έννοια της σταυρικής πορείας (θυσίας και αυτοάρνησης) να διαπερνά όλο το κείμενο, αποτελώντας πηγή έμπνευσης για την κατανόηση του "άραι τον σταυρόν σου".</li>
+</ol>
+</div>
+<div class="section-block references lang-en">
+<h2 class="section-title">References and Citations</h2>
+<ol class="references-list">
+  <li>**The Lenten Triodion**. Translated by Mother Mary and Archimandrite Kallistos Ware. London: Faber and Faber, 1978. (Or subsequent editions by St. Tikhon's Seminary Press, 2005). This essential liturgical book contains all the hymns, services, and rubrics for the Triodion period, including the specific Matins and Divine Liturgy services for the Sunday of the Veneration of the Cross, with its prescribed prokeimenon, alleluia, and communion hymns, alongside the appointed readings.</li>
+  <li>**Schmemann, Alexander**. *Great Lent: Journey to Pascha*. Revised Edition. Crestwood, NY: St. Vladimir's Seminary Press, 1969. This seminal work of modern Orthodox scholarship dedicates a significant chapter to the Sunday of the Cross, elucidating its theological meaning, its placement at the midpoint of the Fast, and its role in encouraging believers to persevere in their Lenten struggle by focusing on the hope of the Resurrection through the Cross.</li>
+  <li>**St. John Chrysostom**. *Homilies on the Epistle to the Hebrews*. Specifically, Homily VIII (on Hebrews 4:14-16) and Homily IX (on Hebrews 5:1-6). Translated in *Nicene and Post-Nicene Fathers, Series 1, Vol. XIV*. Grand Rapids, MI: Wm. B. Eerdmans Publishing Co., 1983. Chrysostom profoundly expounds on Christ's High Priesthood, His identification with humanity through suffering, and the boldness with which believers can approach the throne of grace, themes directly relevant to the Epistle reading for the day.</li>
+  <li>**St. John Chrysostom**. *Homilies on the Gospel of John*. Specifically, Homily LXXXVI (on John 20:1-10). Translated in *Nicene and Post-Nicene Fathers, Series 1, Vol. XIV*. Grand Rapids, MI: Wm. B. Eerdmans Publishing Co., 1983. This homily provides patristic insight into the discovery of the empty tomb, emphasizing the truth of the Resurrection that flows from Christ's sacrifice, connecting the Matins Gospel reading to the broader Paschal context.</li>
+  <li>**St. Gregory Palamas**. *Homilies*. Homily XIII, "On the Adoration of the Precious and Life-Giving Cross". Translated by Christopher Veniamin. South Canaan, PA: Mount Thabor Publishing, 2009. This homily directly addresses the veneration of the Cross, its salvific power, and its call to ascetic self-denial and following Christ (Mark 8:34-9:1), making it exceptionally pertinent to the liturgical day and its primary Gospel reading.</li>
+  <li>**St. Isaac the Syrian**. *The Ascetical Homilies of Saint Isaac the Syrian*. Translated by Dana. Brookline, MA: Holy Transfiguration Monastery, 2017. While not a direct commentary on the Markan passage, St. Isaac's entire corpus is a profound elucidation of what it means to "take up one's cross" (Mark 8:34) through inner spiritual struggle, repentance, and detachment from worldly desires, providing the theological and practical framework for Lenten asceticism.</li>
+  <li>**The Great Horologion**. Translated by the Holy Transfiguration Monastery. Boston, MA: Holy Transfiguration Monastery, 1997. As a foundational liturgical book, it contains the daily fixed services, including the prayers and hymns for the veneration of the Cross that are common to daily and Sunday services, complementing the specific rubrics found in the Triodion.</li>
+  <li>**Ware, Kallistos (Metropolitan of Diokleia)**. *The Orthodox Way*. Revised Edition. Crestwood, NY: St. Vladimir's Seminary Press, 1995. This work provides a comprehensive overview of Orthodox theology and spirituality, with sections dedicated to the Cross as the central symbol of Christian life, the concept of self-denial, and the journey toward deification—all of which are foundational to understanding the Sunday of the Veneration of the Cross within the broader Orthodox tradition.</li>
+</ol>
+</div>
+<div class="disclaimer lang-el">
+<strong>Σημείωση:</strong> Η παρούσα εξήγηση παρέχεται προκειμένου να βοηθήσει τους πιστούς να κατανοήσουν το πλούσιο θεολογικό περιεχόμενο των ορισμένων αναγνωσμάτων της Αγίας Γραφής. Για βαθύτερη μελέτη, συμβουλευτείτε τον εφημέριό σας, τον πνευματικό σας πατέρα ή έγκυρες Ορθόδοξες θεολογικές πηγές.Ετοιμάστηκε από: Αναγνώστης Ιωάννης Κ. Αντωνόπουλος
+</div>
+<div class="disclaimer lang-en">
+<strong>Note:</strong> This exegesis is provided to help the faithful understand the rich theological content of the appointed Scripture readings. For deeper study, please consult your parish priest, spiritual father, or authoritative Orthodox theological sources.Prepared by: Reader Ioannis K. Antonopoulos
+</div>
+    </div>
+
+    <script>
+        // ── Font controls ──
+        var fontFamily    = document.getElementById('fontFamily');
+        var fontSize      = document.getElementById('fontSize');
+        var fontSizeValue = document.getElementById('fontSizeValue');
+        var mainContent   = document.getElementById('mainContent');
+        var body          = document.body;
+
+        var savedFont = localStorage.getItem('readingsFont') || "'Georgia', 'Times New Roman', serif";
+        var savedSize = localStorage.getItem('readingsFontSize') || '16';
+
+        fontFamily.value           = savedFont;
+        fontSize.value             = savedSize;
+        fontSizeValue.textContent  = savedSize + 'px';
+        body.style.fontFamily      = savedFont;
+        mainContent.style.fontSize = savedSize + 'px';
+
+        fontFamily.addEventListener('change', function() {
+            body.style.fontFamily = fontFamily.value;
+            localStorage.setItem('readingsFont', fontFamily.value);
+        });
+
+        fontSize.addEventListener('input', function() {
+            var size = fontSize.value;
+            fontSizeValue.textContent  = size + 'px';
+            mainContent.style.fontSize = size + 'px';
+            localStorage.setItem('readingsFontSize', size);
+        });
+
+        // ── Language toggle ──
+        var langToggle = document.getElementById('langToggle');
+        var isEnglish  = localStorage.getItem('readingsLang') === 'en';
+
+        function applyLanguage() {
+            if (isEnglish) {
+                body.classList.add('show-english');
+                langToggle.innerHTML = '🇬🇷 Ελληνικά';
+                langToggle.title = 'Εναλλαγή γλώσσας';
+            } else {
+                body.classList.remove('show-english');
+                langToggle.innerHTML = '🇬🇧 English';
+                langToggle.title = 'Switch language';
+            }
+        }
+
+        applyLanguage();
+
+        langToggle.addEventListener('click', function() {
+            isEnglish = !isEnglish;
+            localStorage.setItem('readingsLang', isEnglish ? 'en' : 'el');
+            applyLanguage();
+        });
+    </script>
+</body>
+</html>
